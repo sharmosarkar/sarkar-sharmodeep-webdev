@@ -17,7 +17,7 @@ body {
 }
 
 
-/*@media (min-width: 1200px) {*/
+@media (min-width: 991px) {
     .ss-split-view-right{
         width: 65%;
         position: absolute;
@@ -26,8 +26,7 @@ body {
         top:60px;
         bottom: 0px;
     }
-
-/*}*/
+}
 
 
 .ss-div-with-margin{
