@@ -13,74 +13,85 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- custom css files -->
-    <link rel="stylesheet" href="css/general.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
 </head>
 <body>
     <!-- Fixed navbar -->
-    <nav class="navbar fixed-top navbar-light bg-primary">
-        <div class="container">
+    <nav class="navbar navbar-fixed-top navbar-light bg-primary">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12" >
                     <div class="pull-left">
                         <h3>Profile</h3>
                     </div>
                     <div class="pull-right">
-                        <h3 class="text-right"> <span class="glyphicon glyphicon-ok"></span></h3>
+                        <h3 class="text-right">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </h3>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container theme-showcase" role="main">
-        <div class="row div-with-margin">
+    <div class="container-fluid theme-showcase" role="main">
+        <div class="row ss-div-with-margin">
             <div class="col-sm-12">
                 <label for="inputUsername">Username</label>
-                <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                <input type="text"
+                       id="inputUsername"
+                       class="form-control"
+                       value="Dummy Username"
+                       readonly>
             </div>
         </div>
-        <div class="space-maker"></div>
-        <div class="row div-with-margin">
+        <div class="ss-space-maker"></div>
+        <div class="row ss-div-with-margin">
             <div class="col-sm-12">
                 <label for="inputEmail">Email</label>
                 <input type="text" id="inputEmail" class="form-control" placeholder="Email">
             </div>
         </div>
-        <div class="space-maker"></div>
-        <div class="row div-with-margin">
+        <div class="ss-space-maker"></div>
+        <div class="row ss-div-with-margin">
             <div class="col-sm-12">
                 <label for="inputFirstName">First Name</label>
                 <input type="text" id="inputFirstName" class="form-control" placeholder="First Name">
             </div>
         </div>
-        <div class="space-maker"></div>
-        <div class="row div-with-margin">
+        <div class="ss-space-maker"></div>
+        <div class="row ss-div-with-margin">
             <div class="col-sm-12">
                 <label for="inputLastName">Last Name</label>
                 <input type="text" id="inputLastName" class="form-control" placeholder="Last Name">
             </div>
         </div>
-        <div class="space-maker"></div>
+        <div class="ss-space-maker"></div>
         <div class="row">
             <div class="col-sm-12">
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Websites</button>
-                <button class="btn btn-lg btn-danger btn-block" type="submit">Logout</button>
+                <a class="btn btn-lg btn-primary btn-block"
+                   role="button" href="">Websites</a>
+                <a class="btn btn-lg btn-danger btn-block"
+                   role="button" href = "">Logout</a>
             </div>
         </div>
-        <div class="space-maker"></div>
     </div>
 
-    <footer class="footer bg-primary">
-        <div class="container">
+    <!--<footer class="footer bg-primary navbar-fixed-bottom navbar">-->
+    <nav class="navbar navbar-fixed-bottom navbar-light bg-primary">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12" >
                     <div class="pull-right">
-                        <h3 class="text-right"> <span class="glyphicon glyphicon-user"></span> </h3>
+                        <h3 class="text-right">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </h3>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </nav>
+    <!--</footer>-->
 
 </body>
 </html>

@@ -1,0 +1,54 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.ss-split-view-left{
+    position: absolute;
+    top: 60px;
+    bottom: 0px;
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+
+/*@media (min-width: 1200px) {*/
+    .ss-split-view-right{
+        width: 65%;
+        position: absolute;
+        right: 0px;
+        overflow-y: scroll;
+        top:60px;
+        bottom: 0px;
+    }
+
+/*}*/
+
+
+.ss-div-with-margin{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.ss-padding-right-margin{
+    padding-right: 30px;
+}
+
+.ss-space-maker{
+    margin-top: 20px;
+}
+
+#draggablePanelList .panel-body {
+    cursor: move;
+}
+
+.panel{
+    border: 0;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}

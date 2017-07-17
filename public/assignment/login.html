@@ -13,26 +13,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- custom css files -->
-    <link rel="stylesheet" href="css/general.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
 </head>
 <body>
 
     <div class="container">
         <form class="form-signin">
             <h2 class="form-signin-heading">Login</h2>
-            <div class="row div-with-margin">
+            <div class="row ss-div-with-margin">
                 <div class="col-sm-12">
                     <label for="inputUsername" class="sr-only">Username</label>
                     <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
                 </div>
             </div>
-            <div class="row div-with-margin">
+            <div class="row ss-div-with-margin">
                 <div class="col-sm-12">
                     <label for="inputPassword" class="sr-only">Password</label>
                     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                 </div>
             </div>
-            <div class="row div-with-margin">
+            <div class="row ss-div-with-margin">
                 <div class="col-sm-12">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
@@ -41,8 +41,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                    <button class="btn btn-lg btn-success btn-block" type="submit">Register</button>
+                    <a class="btn btn-lg btn-primary btn-block"
+                       role="button" href ="">Login</a>
+                    <a class="btn btn-lg btn-success btn-block"
+                       role="button" href="">Register</a>
                 </div>
             </div>
         </form>
