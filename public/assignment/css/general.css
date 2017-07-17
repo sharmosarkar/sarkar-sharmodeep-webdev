@@ -1,13 +1,18 @@
-html,body {
-    margin:0;
-    padding:0;
-    height:100%; /* needed for container min-height */
+html {
+    position: relative;
+    min-height: 100%;
 }
-
-.main-container {
-    position: relative; /* needed for footer positioning*/
-    height: auto !important; /* real browsers */
-    min-height:100%; /* real browsers */
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
 }
 
 .div-with-margin{
