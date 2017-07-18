@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Widget Edit - Header</title>
+    <!-- mobile first / no zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Vendor CSS files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--Vendor JavaScripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- custom css files -->
+    <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
+</head>
+<body>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-fixed-top navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="pull-left">
+                    <h3>
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        Widget List
+                    </h3>
+                </div>
+                <div class="pull-right">
+                    <h3> <span class="glyphicon glyphicon-ok"></span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid" role="main">
+    <form class="form-register">
+        <h2 class="form-register-heading">Edit Header Widget</h2>
+        <div class="ss-space-maker"></div>
+        <div class="row ss-div-with-margin">
+            <div class="col-sm-12">
+                <label for="headerName" >Name</label>
+                <input type="text" id="headerName" class="form-control" placeholder="Name" required autofocus>
+            </div>
+        </div>
+        <div class="ss-space-maker"></div>
+        <div class="row ss-div-with-margin">
+            <div class="col-sm-12">
+                <label for="headerText">Text</label>
+                <input type="text" id="headerText" class="form-control" placeholder="Text" required>
+            </div>
+        </div>
+        <div class="ss-space-maker"></div>
+        <div class="row ss-div-with-margin">
+            <div class="col-sm-12">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle btn-block" type="button" data-toggle="dropdown">
+                        Header Font Size &nbsp;
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </button>
+                    <ul class="dropdown-menu btn-block">
+                        <li><a href="#">h1</a></li>
+                        <li><a href="#">h2</a></li>
+                        <li><a href="#">h3</a></li>
+                        <li><a href="#">h4</a></li>
+                        <li><a href="#">h5</a></li>
+                        <li><a href="#">h6</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ss-space-maker"></div>
+        <div class="row">
+            <div class="col-sm-12">
+                <a class="btn btn-lg btn-danger btn-block"
+                   role="button" href="">Delete</a>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<nav class="navbar navbar-fixed-bottom navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="pull-right">
+                    <h3 class="text-right">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
