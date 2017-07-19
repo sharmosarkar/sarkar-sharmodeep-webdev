@@ -23,13 +23,17 @@
             <div class="col-sm-4 hidden-xs" >
                 <div class="pull-left">
                     <h3>
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <a href="website-list.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
                         <span>Websites</span>
                     </h3>
                 </div>
                 <div class="pull-right">
                     <h3 class="text-right">
-                        <span class="glyphicon glyphicon-plus"></span>
+                        <a href="website-new.html">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a>
                     </h3>
                 </div>
             </div>
@@ -40,14 +44,18 @@
                     </h3>
                 </div>
                 <div class="pull-left visible-xs">
-                    <h3 class="">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    <h3>
+                        <a href="website-list.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
                         Edit Website
                     </h3>
                 </div>
                 <div class="pull-right">
                     <h3 class="text-right">
-                        <span class="glyphicon glyphicon-ok"></span>
+                        <a href="website-list.html">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
                     </h3>
                 </div>
             </div>
@@ -59,54 +67,78 @@
     <div class="row">
         <div class="col-sm-4 hidden-xs ss-split-view-left" >
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row text-primary text-bold">
                         <div class="col-sm-12" >
                             <div class="pull-left">
-                                <strong>Address Book App</strong>
+                                <strong>
+                                    <a href="page-list.html">
+                                        Address Book App
+                                    </a>
+                                </strong>
                             </div>
                             <div class="pull-right">
-                                <span class="glyphicon glyphicon-cog"></span>
+                                <a href="website-edit.html">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                </div>
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row text-primary text-bold">
                         <div class="col-sm-12" >
                             <div class="pull-left">
-                                <strong>Blogger</strong>
+                                <strong>
+                                    <a href="page-list.html">
+                                        Blogger
+                                    </a>
+                                </strong>
                             </div>
                             <div class="pull-right">
-                                <span class="glyphicon glyphicon-cog"></span>
+                                <a href="website-edit.html">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                </div>
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row text-primary text-bold">
                         <div class="col-sm-12" >
                             <div class="pull-left">
-                                <strong>Blogging App</strong>
+                                <strong>
+                                    <a href="page-list.html">
+                                        Blogging App
+                                    </a>
+                                </strong>
                             </div>
                             <div class="pull-right">
-                                <span class="glyphicon glyphicon-cog"></span>
+                                <a href="website-edit.html">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                </div>
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row text-primary text-bold">
                         <div class="col-sm-12" >
                             <div class="pull-left">
-                                <strong>Script Testing App</strong>
+                                <strong>
+                                    <a href="page-list.html">
+                                        Script Testing App
+                                    </a>
+                                </strong>
                             </div>
                             <div class="pull-right">
-                                <span class="glyphicon glyphicon-cog"></span>
+                                <a href="website-edit.html">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
         <!-- End of left panel -->
@@ -114,15 +146,23 @@
         <div class="col-sm-8 ss-split-view-right" >
             <div class="row">
                 <div class="col-sm-12">
-                    <label for="inputWebsiteName">Website Name</label>
-                    <input type="text" id="inputWebsiteName" class="form-control" placeholder="Name" required autofocus
-                    value="Blogger">
+                    <label for="inputWebsiteName">
+                        Website Name
+                    </label>
+                    <input type="text"
+                           id="inputWebsiteName"
+                           class="form-control"
+                           placeholder="Name"
+                           required autofocus
+                           value="Blogger">
                 </div>
             </div>
             <div class="ss-space-maker"></div>
             <div class="row ss-div-with-margin">
                 <div class="col-sm-12">
-                    <label for="inputWebsiteDescription">Website Description</label>
+                    <label for="inputWebsiteDescription">
+                        Website Description
+                    </label>
                     <textarea id="inputWebsiteDescription"
                               class="form-control"
                               placeholder="Description"
@@ -133,7 +173,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <a class="btn btn-lg btn-danger btn-block"
-                       role="button" href="">Delete</a>
+                       role="button" href="website-list.html">
+                        Delete
+                    </a>
                 </div>
             </div>
         </div>
@@ -146,7 +188,9 @@
             <div class="col-sm-12" >
                 <div class="pull-right">
                     <h3 class="text-right">
-                        <span class="glyphicon glyphicon-user"></span>
+                        <a href="profile.html">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
                     </h3>
                 </div>
             </div>

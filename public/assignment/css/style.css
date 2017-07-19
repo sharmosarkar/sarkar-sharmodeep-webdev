@@ -8,6 +8,10 @@ body {
     margin-top: 60px;
 }
 
+a {
+    color: inherit;
+}
+
 .ss-split-view-left{
     position: absolute;
     top: 60px;
@@ -16,8 +20,13 @@ body {
     overflow-y: scroll;
 }
 
+.ss-center-content{
+    width: 1024px;
+    margin: auto;
+}
 
-@media (min-width: 991px) {
+
+@media (min-width: 768px) {
     .ss-split-view-right{
         width: 65%;
         position: absolute;
@@ -33,6 +42,11 @@ body {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
+.ss-div-with-bottom-margin{
+    margin-bottom: 5px;
+}
+
 
 .ss-padding-right-margin{
     padding-right: 30px;

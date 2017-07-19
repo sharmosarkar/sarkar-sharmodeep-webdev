@@ -23,13 +23,17 @@
             <div class="col-sm-4 hidden-xs" >
                 <div class="pull-left">
                     <h3>
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <a href="page-list.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
                         <span>Pages</span>
                     </h3>
                 </div>
                 <div class="pull-right">
-                    <h3 class="text-right">
-                        <span class="glyphicon glyphicon-plus"></span>
+                    <h3>
+                        <a href="page-new.html">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a>
                     </h3>
                 </div>
             </div>
@@ -41,13 +45,17 @@
                 </div>
                 <div class="pull-left visible-xs">
                     <h3 class="">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <a href="page-list.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
                         New Page
                     </h3>
                 </div>
                 <div class="pull-right">
-                    <h3 class="text-right">
-                        <span class="glyphicon glyphicon-ok"></span>
+                    <h3>
+                        <a href="page-list.html">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
                     </h3>
                 </div>
             </div>
@@ -59,66 +67,96 @@
     <div class="row">
         <div class="col-sm-4 hidden-xs ss-split-view-left" >
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row text-primary text-bold">
                         <div class="col-sm-12" >
                             <div class="pull-left">
-                                <strong>Blog Post</strong>
+                                <strong>
+                                    <a href="widget-list.html">
+                                        Blog Post
+                                    </a>
+                                </strong>
                             </div>
                             <div class="pull-right">
-                                <span class="glyphicon glyphicon-cog"></span>
+                                <a href="page-edit.html">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                </div>
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row text-primary text-bold">
                         <div class="col-sm-12" >
                             <div class="pull-left">
-                                <strong>Blog</strong>
+                                <strong>
+                                    <a href="widget-list.html">
+                                        Blog
+                                    </a>
+                                </strong>
                             </div>
                             <div class="pull-right">
-                                <span class="glyphicon glyphicon-cog"></span>
+                                <a href="page-edit.html">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                </div>
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row text-primary text-bold">
                         <div class="col-sm-12" >
                             <div class="pull-left">
-                                <strong>Home</strong>
+                                <strong>
+                                    <a href="widget-list.html">
+                                        Home
+                                    </a>
+                                </strong>
                             </div>
                             <div class="pull-right">
-                                <span class="glyphicon glyphicon-cog"></span>
+                                <a href="page-edit.html">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                </div>
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row text-primary text-bold">
                         <div class="col-sm-12" >
                             <div class="pull-left">
-                                <strong>About</strong>
+                                <strong>
+                                    <a href="widget-list.html">
+                                        About
+                                    </a>
+                                </strong>
                             </div>
                             <div class="pull-right">
-                                <span class="glyphicon glyphicon-cog"></span>
+                                <a href="page-edit.html">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                </div>
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="row text-primary text-bold">
                         <div class="col-sm-12" >
                             <div class="pull-left">
-                                <strong>Contact Us</strong>
+                                <strong>
+                                    <a href="widget-list.html">
+                                        Contact Us
+                                    </a>
+                                </strong>
                             </div>
                             <div class="pull-right">
-                                <span class="glyphicon glyphicon-cog"></span>
+                                <a href="page-edit.html">
+                                    <span class="glyphicon glyphicon-cog"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
         <!-- End of left panel -->
@@ -126,15 +164,26 @@
         <div class="col-sm-8 ss-split-view-right" >
             <div class="row">
                 <div class="col-sm-12">
-                    <label for="inputPageName">Name</label>
-                    <input type="text" id="inputPageName" class="form-control" placeholder="Page Name" required autofocus>
+                    <label for="inputPageName">
+                        Name
+                    </label>
+                    <input type="text"
+                           id="inputPageName"
+                           class="form-control"
+                           placeholder="Page Name"
+                           required autofocus>
                 </div>
             </div>
             <div class="ss-space-maker"></div>
             <div class="row ss-div-with-margin">
                 <div class="col-sm-12">
-                    <label for="inputPageTitle">Title</label>
-                    <input type="text" id="inputPageTitle" class="form-control" placeholder="Page Title">
+                    <label for="inputPageTitle">
+                        Title
+                    </label>
+                    <input type="text"
+                           id="inputPageTitle"
+                           class="form-control"
+                           placeholder="Page Title">
                 </div>
             </div>
         </div>
@@ -147,7 +196,9 @@
             <div class="col-sm-12" >
                 <div class="pull-right">
                     <h3 class="text-right">
-                        <span class="glyphicon glyphicon-user"></span>
+                        <a href="profile.html">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
                     </h3>
                 </div>
             </div>
