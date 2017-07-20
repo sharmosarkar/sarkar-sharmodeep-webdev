@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Edit Page</title>
+    <title>Edit Website</title>
     <!-- mobile first / no zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Vendor CSS files -->
@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- custom css files -->
-    <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css" crossorigin="anonymous">
 </head>
 <body>
 <!-- Fixed navbar -->
@@ -23,15 +23,15 @@
             <div class="col-sm-4 hidden-xs" >
                 <div class="pull-left">
                     <h3>
-                        <a href="page-list.html">
+                        <a href="website-list.html">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
-                        <span>Pages</span>
+                        <span>Websites</span>
                     </h3>
                 </div>
                 <div class="pull-right">
-                    <h3>
-                        <a href="page-new.html">
+                    <h3 class="text-right">
+                        <a href="website-new.html">
                             <span class="glyphicon glyphicon-plus"></span>
                         </a>
                     </h3>
@@ -40,20 +40,20 @@
             <div class="col-sm-8" >
                 <div class="pull-left hidden-xs">
                     <h3>
-                        Edit Page
+                        Edit Website
                     </h3>
                 </div>
                 <div class="pull-left visible-xs">
                     <h3>
-                        <a href="page-list.html">
+                        <a href="website-list.html">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
-                        Edit Page
+                        Edit Website
                     </h3>
                 </div>
                 <div class="pull-right">
-                    <h3>
-                        <a href="page-list.html">
+                    <h3 class="text-right">
+                        <a href="website-list.html">
                             <span class="glyphicon glyphicon-ok"></span>
                         </a>
                     </h3>
@@ -72,13 +72,13 @@
                         <div class="col-sm-12" >
                             <div class="pull-left">
                                 <strong>
-                                    <a href="widget-list.html">
-                                        Blog Post
+                                    <a href="../page/page-list.html">
+                                        Address Book App
                                     </a>
                                 </strong>
                             </div>
                             <div class="pull-right">
-                                <a href="page-edit.html">
+                                <a href="website-edit.html">
                                     <span class="glyphicon glyphicon-cog"></span>
                                 </a>
                             </div>
@@ -90,13 +90,13 @@
                         <div class="col-sm-12" >
                             <div class="pull-left">
                                 <strong>
-                                    <a href="widget-list.html">
-                                        Blog
+                                    <a href="../page/page-list.html">
+                                        Blogger
                                     </a>
                                 </strong>
                             </div>
                             <div class="pull-right">
-                                <a href="page-edit.html">
+                                <a href="website-edit.html">
                                     <span class="glyphicon glyphicon-cog"></span>
                                 </a>
                             </div>
@@ -108,13 +108,13 @@
                         <div class="col-sm-12" >
                             <div class="pull-left">
                                 <strong>
-                                    <a href="widget-list.html">
-                                        Home
+                                    <a href="../page/page-list.html">
+                                        Blogging App
                                     </a>
                                 </strong>
                             </div>
                             <div class="pull-right">
-                                <a href="page-edit.html">
+                                <a href="website-edit.html">
                                     <span class="glyphicon glyphicon-cog"></span>
                                 </a>
                             </div>
@@ -126,31 +126,13 @@
                         <div class="col-sm-12" >
                             <div class="pull-left">
                                 <strong>
-                                    <a href="widget-list.html">
-                                        About
+                                    <a href="../page/page-list.html">
+                                        Script Testing App
                                     </a>
                                 </strong>
                             </div>
                             <div class="pull-right">
-                                <a href="page-edit.html">
-                                    <span class="glyphicon glyphicon-cog"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="row text-primary text-bold">
-                        <div class="col-sm-12" >
-                            <div class="pull-left">
-                                <strong>
-                                    <a href="widget-list.html">
-                                        Contact Us
-                                    </a>
-                                </strong>
-                            </div>
-                            <div class="pull-right">
-                                <a href="page-edit.html">
+                                <a href="website-edit.html">
                                     <span class="glyphicon glyphicon-cog"></span>
                                 </a>
                             </div>
@@ -164,36 +146,34 @@
         <div class="col-sm-8 ss-split-view-right" >
             <div class="row">
                 <div class="col-sm-12">
-                    <label for="inputPageName">
-                        Name
+                    <label for="inputWebsiteName">
+                        Website Name
                     </label>
                     <input type="text"
-                           id="inputPageName"
+                           id="inputWebsiteName"
                            class="form-control"
-                           placeholder="Page Name"
-                           value="Dummy Name"
-                           required autofocus>
+                           placeholder="Name"
+                           required autofocus
+                           value="Blogger">
                 </div>
             </div>
             <div class="ss-space-maker"></div>
             <div class="row ss-div-with-margin">
                 <div class="col-sm-12">
-                    <label for="inputPageTitle">
-                        Title
+                    <label for="inputWebsiteDescription">
+                        Website Description
                     </label>
-                    <input type="text"
-                           id="inputPageTitle"
-                           class="form-control"
-                           placeholder="Page Title"
-                           value="Dummy Title">
+                    <textarea id="inputWebsiteDescription"
+                              class="form-control"
+                              placeholder="Description"
+                              rows="5">This is a dummy edit website area. This is a dummy edit website area.</textarea>
                 </div>
             </div>
             <div class="ss-space-maker"></div>
             <div class="row">
                 <div class="col-sm-12">
                     <a class="btn btn-lg btn-danger btn-block"
-                       role="button"
-                       href="page-list.html">
+                       role="button" href="website-list.html">
                         Delete
                     </a>
                 </div>
@@ -208,7 +188,7 @@
             <div class="col-sm-12" >
                 <div class="pull-right">
                     <h3 class="text-right">
-                        <a href="profile.html">
+                        <a href="../profile.html">
                             <span class="glyphicon glyphicon-user"></span>
                         </a>
                     </h3>

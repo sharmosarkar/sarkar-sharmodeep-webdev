@@ -1,13 +1,14 @@
 
     <div class="container">
-        <div ng-controller="loginController">
+        <!--<div ng-controller="loginController">-->
+        <div>
 
-            <div ng-show="welcomeUser" class ="alert alert-info">
-                Welcome Back {{welcomeUser.username}}
+            <div ng-show="model.welcomeUser" class ="alert alert-info">
+                Welcome Back {{model.welcomeUser.username}}
             </div>
 
-            <div ng-show="errorMessage" class ="alert alert-danger">
-                {{errorMessage}}
+            <div ng-show="model.errorMessage" class ="alert alert-danger">
+                {{model.errorMessage}}
             </div>
 
             <!--{{hello}}-->
@@ -21,7 +22,7 @@
                                id="inputUsername"
                                class="form-control"
                                placeholder="Username"
-                               ng-model="user.username"
+                               ng-model="model.user.username"
                                required autofocus>
                     </div>
                 </div>
@@ -33,7 +34,7 @@
                                id="inputPassword"
                                class="form-control"
                                placeholder="Password"
-                               ng-model="user.password"
+                               ng-model="model.user.password"
                                required>
                     </div>
                 </div>
@@ -48,11 +49,14 @@
                     <div class="col-sm-12">
                         <a class="btn btn-lg btn-primary btn-block"
                            role="button"
-                           ng-click="login(user)">
+                           ng-click="model.login(model.user)">
                             Login
                         </a>
                         <a class="btn btn-lg btn-success btn-block"
-                           role="button" href="">Register</a>
+                           role="button"
+                           href="#!/register">
+                            Register
+                        </a>
                     </div>
                 </div>
             </form>
