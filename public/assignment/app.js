@@ -17,13 +17,13 @@
 //     function configurationFunction($routeProvider) {
 //         $routeProvider
 //             .when("/login", {
-//                 templateUrl: "user/login_partial.html"
+//                 templateUrl: "user/login.view.client.html"
 //             }) // means, if you login in url .. render the corresponding html
 //             .when("/register", {
-//                 templateUrl: "user/register.html"
+//                 templateUrl: "user/register.view.client.html"
 //             })
 //             .when("/profile/:userId", {
-//                 templateUrl: "user/profile_partial.html"
+//                 templateUrl: "user/profile.view.client.html"
 //             })
 //     }
 //

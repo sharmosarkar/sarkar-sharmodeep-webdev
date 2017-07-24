@@ -16,10 +16,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <!-- custom js files -->
-    <script src="js/app.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/controller.js"></script>
-    <script src="js/service.js"></script>
+    <script src="app.js"></script>
+        <!--        <<Config Files>>     -->
+    <script src="config.js"></script>
+    <script src="views/user/user-config.js"></script>
+    <script src="views/website/website-config.js"></script>
+    <!--        <<Controller Files>>     -->
+    <script src="views/user/controllers/login.controller.client.js"></script>
+    <script src="views/user/controllers/profile.controller.client.js"></script>
+    <script src="views/user/controllers/register.controller.client.js"></script>
+    <script src="views/website/controllers/website-list.controller.client.js"></script>
+    <script src="views/website/controllers/website-new.controller.client.js"></script>
+    <!--        <<Service Files>>     -->
+    <script src="services/user.service.client.js"></script>
+    <script src="services/website.service.client.js"></script>
     <!-- custom css files -->
     <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
 </head>
@@ -48,7 +58,7 @@
         <!--</a>-->
         <!--<a class="btn btn-lg btn-success btn-block"-->
            <!--role="button"-->
-           <!--href="register.html">-->
+           <!--hrregister.view.client.htmlhtml">-->
             <!--&lt;!&ndash;ng-click="login(user)">&ndash;&gt;-->
             <!--Register-->
         <!--</a>-->

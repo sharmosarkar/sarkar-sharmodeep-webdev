@@ -1,0 +1,142 @@
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-fixed-top navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="pull-left">
+                    <h3>
+                        <a href="../../../profile.html">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <span>
+                            Websites
+                        </span>
+                    </h3>
+                </div>
+                <div class="pull-right">
+                    <h3 class="text-right">
+                        <a href="#!/user/{{model._id}}/website/new">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid" >
+    <div class="list-group">
+        <div ng-repeat="website in model.websites"
+             class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="row text-primary text-bold">
+                <div class="col-sm-11" >
+                    <div class="pull-left">
+                        <strong>
+                            <a href="../../page/page-list.html">
+                                {{website.name}}
+                            </a>
+                        </strong>
+                    </div>
+                </div>
+                <div class="col-sm-1" >
+                    <div class="pull-right">
+                        <a href="website-edit.view.client.html">
+                            <span class="glyphicon glyphicon-cog"></span>
+                        </a>
+                    </div>
+                    <!--<div class="pull-right visible-xs">-->
+                        <!--<span class="glyphicon glyphicon-cog ss-padding-right-margin"></span>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!--<div class="list-group-item list-group-item-action flex-column align-items-start">-->
+            <!--<div class="row text-primary text-bold">-->
+                <!--<div class="col-sm-11" >-->
+                    <!--<div class="pull-left">-->
+                        <!--<strong>-->
+                            <!--<a href="../../page/page-list.html">-->
+                                <!--Blogger-->
+                            <!--</a>-->
+                        <!--</strong>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-1" >-->
+                    <!--<div class="pull-right">-->
+                        <!--<a href="website-edit.view.client.html">-->
+                            <!--<span class="glyphicon glyphicon-cog"></span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div class="pull-right visible-xs">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="glyphicon glyphicon-cog ss-padding-right-margin"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="list-group-item list-group-item-action flex-column align-items-start">-->
+            <!--<div class="row text-primary text-bold">-->
+                <!--<div class="col-sm-11" >-->
+                    <!--<div class="pull-left">-->
+                        <!--<strong>-->
+                            <!--<a href="../../page/page-list.html">-->
+                                <!--Blogging App-->
+                            <!--</a>-->
+                        <!--</strong>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-1" >-->
+                    <!--<div class="pull-right">-->
+                        <!--<a href="website-edit.view.client.html">-->
+                            <!--<span class="glyphicon glyphicon-cog"></span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div class="pull-right visible-xs">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="glyphicon glyphicon-cog ss-padding-right-margin"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="list-group-item list-group-item-action flex-column align-items-start">-->
+            <!--<div class="row text-primary text-bold">-->
+                <!--<div class="col-sm-11" >-->
+                    <!--<div class="pull-left">-->
+                        <!--<strong>-->
+                            <!--<a href="../../page/page-list.html">-->
+                                <!--Script Testing App-->
+                            <!--</a>-->
+                        <!--</strong>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-1" >-->
+                    <!--<div class="pull-right">-->
+                        <!--<a href="website-edit.view.client.html">-->
+                             <!--<span class="glyphicon glyphicon-cog"></span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div class="pull-right visible-xs">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="glyphicon glyphicon-cog ss-padding-right-margin"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+</div>
+
+<nav class="navbar navbar-fixed-bottom navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="pull-right">
+                    <h3 class="text-right">
+                        <a href="../../../profile.html">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -3,10 +3,10 @@
  */
 
 ( function () {
-                angular
-                    .module("WamApp")
-                    .controller("loginController", loginController)
-                    .controller("profileController", profileController);
+    angular
+        .module("WamApp")
+        .controller("loginController", loginController)
+        .controller("profileController", profileController);
 
 
 // $scope is the variable that binds the view and the controller
@@ -20,7 +20,7 @@
 
         // onload functions
         function init() {
-            
+
         }
         init();
 
@@ -35,10 +35,10 @@
             }
             else{
                 // wrong username or passwrord
-               // if ($scope.welcomeUser === undefined) {
+                // if ($scope.welcomeUser === undefined) {
                 model.welcomeUser = user;
                 $location.url("profile/" + user._id);
-              //  }
+                //  }
             }
         }
     }
