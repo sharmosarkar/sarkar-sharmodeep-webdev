@@ -19,6 +19,11 @@
                 controller:  "websiteNewController",
                 controllerAs : "model"
             })
+            .when("/user/:userId/website/:wid", {
+                templateUrl: "views/website/templates/website-edit.view.client.html",
+                controller:  "websiteEditController",
+                controllerAs : "model"
+            })
     }
 
 })();

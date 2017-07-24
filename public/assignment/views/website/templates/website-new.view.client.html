@@ -6,7 +6,7 @@
             <div class="col-sm-4 hidden-xs" >
                 <div class="pull-left">
                     <h3>
-                        <a href="website-list.view.client.html">
+                        <a href="#!/user/{{model.userId}}/website">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
                         <span>Websites</span>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="pull-right">
                     <h3 class="text-right">
-                        <a href="website-new.view.client.html">
+                        <a href="#!/user/{{model.userId}}/website/new">
                             <span class="glyphicon glyphicon-plus"></span>
                         </a>
                     </h3>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="pull-left visible-xs">
                     <h3 class="">
-                        <a href="website-list.view.client.html">
+                        <a href="#!/user/{{model.userId}}/website">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
                         New Website
@@ -56,13 +56,13 @@
                         <div class="col-sm-12" >
                             <div class="pull-left">
                                 <strong>
-                                    <a href="../../page/page-list.html">
+                                    <a href="../../page/templates/page-list.view.client.html">
                                         {{website.name}}
                                     </a>
                                 </strong>
                             </div>
                             <div class="pull-right">
-                                <a href="website-edit.view.client.html">
+                                <a href="#!/user/{{model.userId}}/website/{{website._id}}">
                                     <span class="glyphicon glyphicon-cog"></span>
                                 </a>
                             </div>
