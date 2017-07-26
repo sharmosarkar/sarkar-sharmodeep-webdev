@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>WAMP</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>WAM App</title>
     <!-- mobile first / no zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Vendor CSS files -->
@@ -12,16 +13,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!--Vendor JavaScripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <!-- custom js files -->
     <script src="app.js"></script>
+    <!-- additional custom javascript files -->
+    <script src="js/custom_filters.js"></script>
     <!--        <<Config Files>>     -->
     <script src="config.js"></script>
     <script src="views/user/user-config.js"></script>
     <script src="views/website/website-config.js"></script>
     <script src="views/page/page-config.js"></script>
+    <script src="views/widget/widget-config.js"></script>
     <!--        <<Controller Files>>     -->
     <script src="views/user/controllers/login.controller.client.js"></script>
     <script src="views/user/controllers/profile.controller.client.js"></script>
@@ -32,10 +37,14 @@
     <script src="views/page/controllers/page-list.controller.client.js"></script>
     <script src="views/page/controllers/page-new.controller.client.js"></script>
     <script src="views/page/controllers/page-edit.controller.client.js"></script>
+    <script src="views/widget/controllers/widget-list.controller.client.js"></script>
+    <script src="views/widget/controllers/widget-edit.controller.client.js"></script>
+    <script src="views/widget/controllers/widget-new.controller.client.js"></script>
     <!--        <<Service Files>>     -->
     <script src="services/user.service.client.js"></script>
     <script src="services/website.service.client.js"></script>
     <script src="services/page.service.client.js"></script>
+    <script src="services/widget.service.client.js"></script>
     <!-- custom css files -->
     <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
 </head>

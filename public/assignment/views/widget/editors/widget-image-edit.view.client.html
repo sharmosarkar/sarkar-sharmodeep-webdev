@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Widget Edit - Youtube</title>
-    <!-- mobile first / no zooming -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- Vendor CSS files -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!--Vendor JavaScripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- custom css files -->
-    <link rel="stylesheet" href="../../css/style.css" crossorigin="anonymous">
-</head>
-<body>
 <!-- Fixed navbar -->
 <nav class="navbar navbar-fixed-top navbar-light bg-primary">
     <div class="container-fluid">
@@ -23,7 +5,7 @@
             <div class="col-sm-12" >
                 <div class="pull-left">
                     <h3>
-                        <a href="widget-list.html">
+                        <a href="#!/user/{{model.userId}}/website/{{model.wid}}/page/{{model.pid}}/widget">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
                         Widget Edit
@@ -31,7 +13,7 @@
                 </div>
                 <div class="pull-right">
                     <h3>
-                        <a href="widget-list.html">
+                        <a ng-click="model.updateWidget(model.wgid, model.widget)">
                             <span class="glyphicon glyphicon-ok"></span>
                         </a>
                     </h3>
@@ -44,34 +26,34 @@
 <div class="container-fluid" role="main">
     <form class="form-register">
         <h2 class="form-register-heading">
-            Edit Youtube Widget
+            Edit Image Widget
         </h2>
-        <div class="row ">
-            <div class="col-sm-12">
-                <label for="imageName" >
-                    Name
-                </label>
-                <input type="text"
-                       id="imageName"
-                       class="form-control"
-                       placeholder="Name"
-                       required autofocus>
-            </div>
-        </div>
-        <div class="ss-space-maker"></div>
-        <div class="row ">
-            <div class="col-sm-12">
-                <label for="imageText">
-                    Text
-                </label>
-                <input type="text"
-                       id="imageText"
-                       class="form-control"
-                       placeholder="Text"
-                       required>
-            </div>
-        </div>
-        <div class="ss-space-maker"></div>
+        <!--<div class="row ">-->
+            <!--<div class="col-sm-12">-->
+                <!--<label for="imageName">-->
+                    <!--Name-->
+                <!--</label>-->
+                <!--<input type="text"-->
+                       <!--id="imageName"-->
+                       <!--class="form-control"-->
+                       <!--placeholder="Name"-->
+                       <!--required autofocus>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="ss-space-maker"></div>-->
+        <!--<div class="row ">-->
+            <!--<div class="col-sm-12">-->
+                <!--<label for="imageText">-->
+                    <!--Text-->
+                <!--</label>-->
+                <!--<input type="text"-->
+                       <!--id="imageText"-->
+                       <!--class="form-control"-->
+                       <!--placeholder="Text"-->
+                       <!--required>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="ss-space-maker"></div>-->
         <div class="row ">
             <div class="col-sm-12">
                 <label for="imageURL">
@@ -81,6 +63,7 @@
                        id="imageURL"
                        class="form-control"
                        placeholder="URL"
+                       ng-model="model.widget.url"
                        required>
             </div>
         </div>
@@ -94,15 +77,35 @@
                        id="imagewidth"
                        class="form-control"
                        placeholder="Width"
+                       ng-model="model.widget.width"
                        required>
             </div>
         </div>
+        <!--<div class="ss-space-maker"></div>-->
+        <!--<div class="row ">-->
+            <!--<div class="col-sm-12 ss-div-with-bottom-margin">-->
+                <!--<label for="imageFile">-->
+                    <!--Upload (Non-Functional)-->
+                <!--</label>-->
+                <!--<input type="file"-->
+                       <!--id="imageFile"-->
+                       <!--class="form-control">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-sm-12">-->
+                <!--<a class="btn btn-lg btn-primary btn-block"-->
+                   <!--role="button" href="">-->
+                    <!--Upload Image (Non-Functional)-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="ss-space-maker"></div>
         <div class="row">
             <div class="col-sm-12">
                 <a class="btn btn-lg btn-danger btn-block"
                    role="button"
-                   href="widget-list.html">
+                   ng-click="model.deleteWidget(model.wgid)">
                     Delete
                 </a>
             </div>
@@ -117,7 +120,7 @@
             <div class="col-sm-12" >
                 <div class="pull-right">
                     <h3 class="text-right">
-                        <a href="../../profile.html">
+                        <a href="#!/profile/{{model.userId}}">
                             <span class="glyphicon glyphicon-user"></span>
                         </a>
                     </h3>
@@ -126,6 +129,3 @@
         </div>
     </div>
 </nav>
-
-</body>
-</html>

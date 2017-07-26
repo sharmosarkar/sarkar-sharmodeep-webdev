@@ -1,0 +1,113 @@
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-fixed-top navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="pull-left">
+                    <h3>
+                        <a href="#!/user/{{model.userId}}/website/{{model.wid}}/page/{{model.pid}}/widget">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        Widget Edit
+                    </h3>
+                </div>
+                <div class="pull-right">
+                    <h3>
+                        <a ng-click="model.updateWidget(model.wgid, model.widget)">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid" role="main">
+    <form class="form-register">
+        <h2 class="form-register-heading">
+            Edit Youtube Widget
+        </h2>
+        <!--<div class="row ">-->
+            <!--<div class="col-sm-12">-->
+                <!--<label for="imageName" >-->
+                    <!--Name-->
+                <!--</label>-->
+                <!--<input type="text"-->
+                       <!--id="imageName"-->
+                       <!--class="form-control"-->
+                       <!--placeholder="Name"-->
+                       <!--required autofocus>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="ss-space-maker"></div>-->
+        <!--<div class="row ">-->
+            <!--<div class="col-sm-12">-->
+                <!--<label for="imageText">-->
+                    <!--Text-->
+                <!--</label>-->
+                <!--<input type="text"-->
+                       <!--id="imageText"-->
+                       <!--class="form-control"-->
+                       <!--placeholder="Text"-->
+                       <!--required>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="ss-space-maker"></div>-->
+        <div class="row ">
+            <div class="col-sm-12">
+                <label for="youtubeURL">
+                    URL
+                </label>
+                <input type="text"
+                       id="youtubeURL"
+                       class="form-control"
+                       placeholder="URL"
+                       ng-model = "model.widget.url"
+                       required>
+            </div>
+        </div>
+        <div class="ss-space-maker"></div>
+        <div class="row ">
+            <div class="col-sm-12">
+                <label for="youtubewidth">
+                    Width
+                </label>
+                <input type="text"
+                       id="youtubewidth"
+                       class="form-control"
+                       placeholder="Width"
+                       ng-model = "model.widget.width"
+                       required>
+            </div>
+        </div>
+        <div class="ss-space-maker"></div>
+        <div class="row">
+            <div class="col-sm-12">
+                <a class="btn btn-lg btn-danger btn-block"
+                   role="button"
+                   ng-click="model.deleteWidget(model.wgid)">
+                    Delete
+                </a>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<nav class="navbar navbar-fixed-bottom navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="pull-right">
+                    <h3 class="text-right">
+                        <a href="#!/profile/{{model.userId}}">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

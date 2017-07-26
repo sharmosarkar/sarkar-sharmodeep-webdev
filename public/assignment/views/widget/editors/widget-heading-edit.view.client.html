@@ -1,0 +1,91 @@
+<nav class="navbar navbar-fixed-top navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="pull-left">
+                    <h3>
+                        <a href="#!/user/{{model.userId}}/website/{{model.wid}}/page/{{model.pid}}/widget">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        Widget Edit
+                    </h3>
+                </div>
+                <div class="pull-right">
+                    <h3>
+                        <a ng-click="model.updateWidget(model.wgid, model.widget)">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid" role="main">
+    <form class="form-register">
+        <h2 class="form-register-heading">
+            Edit Header Widget
+        </h2>
+
+        <div class="ss-space-maker"></div>
+        <div class="row ss-div-with-margin">
+            <div class="col-sm-12">
+                <label for="headerText">
+                    Text
+                </label>
+                <input type="text"
+                       id="headerText"
+                       class="form-control"
+                       placeholder="Text"
+                       ng-model="model.widget.text"
+                       required>
+                <!--ng-model="model.widget.HEADING.text"-->
+            </div>
+        </div>
+        <div class="ss-space-maker"></div>
+        <div class="row ss-div-with-margin">
+            <div class="col-sm-12">
+                <label for="headerSize"> Header Size </label>
+                <select
+                        class="form-control ng-pristine ng-valid ng-touched"
+                        id="headerSize"
+                        ng-model="model.widget.size">
+                    <option ng-value="1" >1</option>
+                    <option ng-value="2" >2</option>
+                    <option ng-value="3" >3</option>
+                    <option ng-value="4" >4</option>
+                    <option ng-value="5" >5</option>
+                    <option ng-value="6" >6</option>
+                </select>
+            </div>
+        </div>
+        <div class="ss-space-maker"></div>
+        <div class="row">
+            <div class="col-sm-12">
+                <a class="btn btn-lg btn-danger btn-block"
+                   role="button"
+                   ng-click="model.deleteWidget(model.wgid)">
+                    Delete
+                </a>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<nav class="navbar navbar-fixed-bottom navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="pull-right">
+                    <h3 class="text-right">
+                        <a href="#!/profile/{{model.userId}}">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

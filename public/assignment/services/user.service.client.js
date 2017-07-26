@@ -13,7 +13,7 @@
     // so ....
     //>>>>>>>    this.findUserByUsernameAndPassword = findUserByUsernameAndPassword;
 
-    function userService() {
+    function userService($http) {
 
         // data in service
         var valid_users = [
@@ -42,6 +42,7 @@
                 }
             }
             return null;
+            // return $http.get("http://localhost:3000/api/users/"+userId);
         }
 
         function findUserByCredentials(username, password) {

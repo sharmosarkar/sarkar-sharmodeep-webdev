@@ -68,10 +68,9 @@ a {
     padding-right: 0px;
 }
 
-/*.panel .col-sm-1 {*/
-    /*margin-right: 0px;*/
-    /*padding-right: 20px;*/
-/*}*/
+.list-group-item {
+    cursor: pointer;
+ }
 
 #draggablePanelList .panel .col-sm-1 .pull-right {
     position: absolute;

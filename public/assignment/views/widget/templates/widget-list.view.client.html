@@ -1,0 +1,93 @@
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-fixed-top navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="pull-left">
+                    <h3>
+                        <a href="#!/user/{{model.userId}}/website/{{model.wid}}/page">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        Widgets
+                    </h3>
+                </div>
+                <div class="pull-right">
+                    <h3>
+                        <!--<a href="#!/user/{{model.userId}}/website/{{model.wid}}/page/{{model.pid}}/widget/new">-->
+                        <a href = "#!/user/{{model.userId}}/website/{{model.wid}}/page/{{model.pid}}/widget/new">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <!-- Bootstrap 3 panel list. -->
+    <ul id="draggablePanelList" class="list-unstyled">
+        <li     ng-repeat="widget in model.widgets"
+                class="panel">
+            <div class="panel-body">
+                <div class="row text-bold">
+                    <div class="col-sm-11" >
+                        <div class="pull-left">
+                            <div ng-switch="widget.widgetType">
+                                <div ng-switch-when="HEADING">
+                                    <ng-include src="'views/widget/templates/widget-heading.view.client.html'">
+                                </div>
+                                <div ng-switch-when="IMAGE">
+                                    <ng-include src="'views/widget/templates/widget-image.view.client.html'">
+                                </div>
+                                <div ng-switch-when="YOUTUBE">
+                                    <ng-include src="'views/widget/templates/widget-youtube.view.client.html'">
+                                </div>
+                                <div ng-switch-when="HTML">
+                                    <ng-include src="'views/widget/templates/widget-html.view.client.html'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1" >
+                        <div class="pull-right">
+                            <h4>
+                                <a href="#!/user/{{model.userId}}/website/{{model.wid}}/page/{{model.pid}}/widget/{{widget._id}}">
+                                    <span class="glyphicon glyphicon-cog text-primary"></span>
+                                </a>
+                                <span class="glyphicon glyphicon-align-justify"></span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+<nav class="navbar navbar-fixed-bottom navbar-light bg-primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6" >
+                <div class="pull-left">
+                    <h3>
+                        <span class="glyphicon glyphicon-play"></span>
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-sm-6" >
+                <div class="pull-right">
+                    <h3>
+                        <a href="#!/profile/{{model.userId}}">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

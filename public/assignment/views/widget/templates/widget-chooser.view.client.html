@@ -1,26 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Widget Chooser</title>
-    <!-- mobile first / no zooming -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- Vendor CSS files -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!--Vendor JavaScripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- custom css files -->
-    <link rel="stylesheet" href="../../css/style.css" crossorigin="anonymous">
-</head>
-<body>
+
 <!-- Fixed navbar -->
 <nav class="navbar navbar-fixed-top navbar-light bg-primary">
     <div class="container-fluid">
         <h3>
-            <a href="widget-list.html">
+            <a href="#!/user/{{model.userId}}/website/{{model.wid}}/page/{{model.pid}}/widget">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
             Choose Widget
@@ -31,7 +14,8 @@
 <div class="container-fluid">
 
     <div class="list-group">
-        <a href="widget-heading.html" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a ng-click="model.createWidget('HEADING')"
+           class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="row text-primary text-bold">
                 <div class="col-sm-11" >
                     <div class="pull-left">
@@ -39,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-sm-1" >
-                    <div class="pull-right hidden-xs">
+                    <div class="pull-right">
                         <span class="glyphicon glyphicon-chevron-right"></span>
                     </div>
                     <div class="pull-right visible-xs">
@@ -48,92 +32,8 @@
                 </div>
             </div>
         </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="row text-primary text-bold">
-                <div class="col-sm-11" >
-                    <div class="pull-left">
-                        <strong>Label</strong>
-                    </div>
-                </div>
-                <div class="col-sm-1" >
-                    <div class="pull-right hidden-xs">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </div>
-                    <div class="pull-right visible-xs">
-                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="row text-primary text-bold">
-                <div class="col-sm-11" >
-                    <div class="pull-left">
-                        <strong>HTML</strong>
-                    </div>
-                </div>
-                <div class="col-sm-1" >
-                    <div class="pull-right hidden-xs">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </div>
-                    <div class="pull-right visible-xs">
-                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="row text-primary text-bold">
-                <div class="col-sm-11" >
-                    <div class="pull-left">
-                        <strong>Text Input</strong>
-                    </div>
-                </div>
-                <div class="col-sm-1" >
-                    <div class="pull-right hidden-xs">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </div>
-                    <div class="pull-right visible-xs">
-                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="row text-primary text-bold">
-                <div class="col-sm-11" >
-                    <div class="pull-left">
-                        <strong>Link</strong>
-                    </div>
-                </div>
-                <div class="col-sm-1" >
-                    <div class="pull-right hidden-xs">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </div>
-                    <div class="pull-right visible-xs">
-                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="row text-primary text-bold">
-                <div class="col-sm-11" >
-                    <div class="pull-left">
-                        <strong>Button</strong>
-                    </div>
-                </div>
-                <div class="col-sm-1" >
-                    <div class="pull-right hidden-xs">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </div>
-                    <div class="pull-right visible-xs">
-                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="widget-image.html" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a ng-click="model.createWidget('IMAGE')"
+           class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="row text-primary text-bold">
                 <div class="col-sm-11" >
                     <div class="pull-left">
@@ -150,7 +50,8 @@
                 </div>
             </div>
         </a>
-        <a href="widget-youtube.html" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a ng-click="model.createWidget('YOUTUBE')"
+           class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="row text-primary text-bold">
                 <div class="col-sm-11" >
                     <div class="pull-left">
@@ -167,11 +68,11 @@
                 </div>
             </div>
         </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
             <div class="row text-primary text-bold">
                 <div class="col-sm-11" >
                     <div class="pull-left">
-                        <strong>Data Table</strong>
+                        <strong>Label</strong>  
                     </div>
                 </div>
                 <div class="col-sm-1" >
@@ -184,11 +85,96 @@
                 </div>
             </div>
         </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
             <div class="row text-primary text-bold">
                 <div class="col-sm-11" >
                     <div class="pull-left">
-                        <strong>Repeater</strong>
+                        <strong>HTML</strong>  
+                    </div>
+                </div>
+                <div class="col-sm-1" >
+                    <div class="pull-right hidden-xs">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    <div class="pull-right visible-xs">
+                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
+            <div class="row text-primary text-bold">
+                <div class="col-sm-11" >
+                    <div class="pull-left">
+                        <strong>Text Input</strong>  
+                    </div>
+                </div>
+                <div class="col-sm-1" >
+                    <div class="pull-right hidden-xs">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    <div class="pull-right visible-xs">
+                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
+            <div class="row text-primary text-bold">
+                <div class="col-sm-11" >
+                    <div class="pull-left">
+                        <strong>Link</strong>  
+                    </div>
+                </div>
+                <div class="col-sm-1" >
+                    <div class="pull-right hidden-xs">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    <div class="pull-right visible-xs">
+                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
+            <div class="row text-primary text-bold">
+                <div class="col-sm-11" >
+                    <div class="pull-left">
+                        <strong>Button</strong>  
+                    </div>
+                </div>
+                <div class="col-sm-1" >
+                    <div class="pull-right hidden-xs">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    <div class="pull-right visible-xs">
+                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
+            <div class="row text-primary text-bold">
+                <div class="col-sm-11" >
+                    <div class="pull-left">
+                        <strong>Data Table</strong>  
+                    </div>
+                </div>
+                <div class="col-sm-1" >
+                    <div class="pull-right hidden-xs">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    <div class="pull-right visible-xs">
+                        <span class="glyphicon glyphicon-chevron-right ss-padding-right-margin"></span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start disabled">
+            <div class="row text-primary text-bold">
+                <div class="col-sm-11" >
+                    <div class="pull-left">
+                        <strong>Repeater</strong>  
                     </div>
                 </div>
                 <div class="col-sm-1" >
@@ -212,7 +198,7 @@
             <div class="col-sm-12" >
                 <div class="pull-right">
                     <h3 class="text-right">
-                        <a href="../../profile.html">
+                        <a href="#!/profile/{{model.userId}}">
                             <span class="glyphicon glyphicon-user"></span>
                         </a>
                     </h3>
@@ -221,6 +207,3 @@
         </div>
     </div>
 </nav>
-
-</body>
-</html>
