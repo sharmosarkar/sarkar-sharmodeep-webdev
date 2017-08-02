@@ -16,13 +16,22 @@
         model.createPage = createPage;
 
         function init() {
-            model.pages = pageService.findPageByWebsiteId(model.wid);
+            pageService
+                .findPageByWebsiteId(model.wid)
+                .then(function (pages) {
+                    model.pages = pages;
+                });
         }
         init();
         
         function createPage(websiteId, page) {
-            pageService.createPage(websiteId, page);
-            $location.url('/user/'+model.userId+'/website/'+model.wid+'/page');
+            // pageService.createPage(websiteId, page);
+            // $location.url('/user/'+model.userId+'/website/'+model.wid+'/page');
+            pageService
+                .createPage(websiteId, page)
+                .then(function () {
+                    $location.url('/user/'+model.userId+'/website/'+model.wid+'/page');
+                });
         }
     }
 })();

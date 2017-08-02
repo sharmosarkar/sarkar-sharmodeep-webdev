@@ -8,18 +8,8 @@
         .module("WamApp")
         .factory("websiteService", websiteService);
 
-    function websiteService() {
+    function websiteService($http) {
 
-        // data in service
-        var websites = [
-                { "_id": "123", "name": "Facebook",    "developerId": "456", "description": "Lorem" },
-                { "_id": "234", "name": "Tweeter",     "developerId": "456", "description": "Lorem" },
-                { "_id": "456", "name": "Gizmodo",     "developerId": "456", "description": "Lorem" },
-                { "_id": "890", "name": "Go",          "developerId": "123", "description": "Lorem" },
-                { "_id": "567", "name": "Tic Tac Toe", "developerId": "123", "description": "Lorem" },
-                { "_id": "678", "name": "Checkers",    "developerId": "123", "description": "Lorem" },
-                { "_id": "789", "name": "Chess",       "developerId": "234", "description": "Lorem" }
-            ];
 
         var api =  {
 
@@ -32,54 +22,68 @@
         return api;
         
         function createWebsite(userId, website) {
-            var total_existing_websites = websites.length;
-            var new_website_id = (total_existing_websites+1)+''+(total_existing_websites+2)+''+(total_existing_websites+3);
-            var website_new = {};
-            website_new._id = new_website_id;
-            website_new.name = website.name;
-            website_new.description = website.description;
-            website_new.developerId = userId;
-            websites.push(website_new);
+            // var total_existing_websites = websites.length;
+            // var new_website_id = (total_existing_websites+1)+''+(total_existing_websites+2)+''+(total_existing_websites+3);
+            // var website_new = {};
+            // website_new._id = new_website_id;
+            // website_new.name = website.name;
+            // website_new.description = website.description;
+            // website_new.developerId = userId;
+            // websites.push(website_new);
             // console.log(websites);
+            var url = "/api/user/" + userId + "/website";
+            return $http.post(url, website);
         }
 
         function findWebsitesByUser(userId) {
-            var website_list = [];
-            for (var u in websites) {
-                var _website = websites[u];
-                if (_website.developerId === userId ) {
-                    website_list.push(_website);
-                }
-            }
-            return website_list;
+            // var website_list = [];
+            // for (var u in websites) {
+            //     var _website = websites[u];
+            //     if (_website.developerId === userId ) {
+            //         website_list.push(_website);
+            //     }
+            // }
+            // return website_list;
+            var url = "/api/user/" + userId + "/website";
+            return $http.get(url)
+                .then(function (response) {
+                    // console.log(response.data);
+                    return response.data;
+                });
         }
         
-        function findWebsiteById(websiteId){
-            for (var u in websites) {
-                var _website = websites[u];
-                if (websiteId === _website._id){
-                    return _website;
-                }
-            }
+        function findWebsiteById(userId, websiteId){
+            // for (var u in websites) {
+            //     var _website = websites[u];
+            //     if (websiteId === _website._id){
+            //         return _website;
+            //     }
+            // }
+            var url = "/api/website/" + websiteId;
+            return $http.get(url);
         }
         
         function updateWebsite(websiteId, website) {
-            for (var u in websites) {
-                var _website = websites[u];
-                if (websiteId === _website._id){
-                    _website.name = website.name;
-                    _website.description = website.description;
-                }
-            }
+            // for (var u in websites) {
+            //     var _website = websites[u];
+            //     if (websiteId === _website._id){
+            //         _website.name = website.name;
+            //         _website.description = website.description;
+            //     }
+            // }
+            var url = "/api/website/" + websiteId;
+            return $http.put(url, website);
         }
         
         function deleteWebsite(websiteId) {
-            for (var u in websites) {
-                var _website = websites[u];
-                if (websiteId === _website._id) {
-                    websites.splice(u, 1);
-                }
-            }
+            // for (var u in websites) {
+            //     var _website = websites[u];
+            //     if (websiteId === _website._id) {
+            //         websites.splice(u, 1);
+            //     }
+            // }
+            var url = "/api/website/" + websiteId;
+            return $http.delete(url);
         }
 
 

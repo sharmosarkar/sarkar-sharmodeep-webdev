@@ -17,7 +17,11 @@
         model.trustHTMLContent = trustHTMLContent;
 
         function init() {
-            model.widgets = widgetService.findWidgetsByPageId(model.pid);
+            widgetService
+                .findWidgetsByPageId(model.pid)
+                .then(function (widgets) {
+                    model.widgets = widgets;
+                });
             // console.log(model.widgets);
         }
         init();

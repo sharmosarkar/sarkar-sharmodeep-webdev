@@ -18,14 +18,23 @@
         model.deletePage = deletePage;
 
         function init() {
-            model.pages = pageService.findPageByWebsiteId(model.wid);
-            model.page = pageService.findPageById(model.pid);
+            pageService
+                .findPageByWebsiteId(model.wid)
+                .then(function (pages) {
+                    model.pages = pages;
+                });
+            pageService
+                .findPageById(model.pid)
+                .then(function (response) {
+                    model.page = response.data;
+                });
         }
         init();
 
         function updatePage(pageId, page)  {
             pageService.updatePage(pageId, page);
             $location.url('/user/'+model.userId+'/website/'+model.wid+'/page');
+
         }
         
         function deletePage(pageId) {

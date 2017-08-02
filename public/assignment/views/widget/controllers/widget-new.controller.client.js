@@ -17,7 +17,7 @@
         model.createWidget = createWidget;
 
         function init() {
-            console.log("FIRED !!");
+
         }
         init();
 
@@ -32,9 +32,14 @@
                 'text': ''
             };
             widget.widgetType = widgetType;
-            model.wgid = widgetService.createWidget(model.pid, widget);
-            console.log(model.widget);
-            $location.url('user/'+model.userId+'/website/'+model.wid+'/page/'+model.pid+'/widget/'+model.wgid);
+             widgetService
+                 .createWidget(model.pid, widget)
+                 .then(function (response) {
+                     model.wgid = response.data._id;
+                     $location.url('user/'+model.userId+'/website/'+model.wid+'/page/'+model.pid+'/widget/'+model.wgid);
+                 });
+            // console.log(model.widget);
+            // $location.url('user/'+model.userId+'/website/'+model.wid+'/page/'+model.pid+'/widget/'+model.wgid);
         }
 
 

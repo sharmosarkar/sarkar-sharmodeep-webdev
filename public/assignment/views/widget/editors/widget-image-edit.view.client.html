@@ -81,25 +81,21 @@
                        required>
             </div>
         </div>
-        <!--<div class="ss-space-maker"></div>-->
-        <!--<div class="row ">-->
-            <!--<div class="col-sm-12 ss-div-with-bottom-margin">-->
-                <!--<label for="imageFile">-->
-                    <!--Upload (Non-Functional)-->
-                <!--</label>-->
-                <!--<input type="file"-->
-                       <!--id="imageFile"-->
-                       <!--class="form-control">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="row">-->
-            <!--<div class="col-sm-12">-->
-                <!--<a class="btn btn-lg btn-primary btn-block"-->
-                   <!--role="button" href="">-->
-                    <!--Upload Image (Non-Functional)-->
-                <!--</a>-->
-            <!--</div>-->
-        <!--</div>-->
+        <div class="ss-space-maker"></div>
+        <div class="row ">
+            <div class="col-sm-12 ss-div-with-bottom-margin">
+                <form action="/api/upload"   method="post" enctype="multipart/form-data">
+                    <input  name="myFile"    type="file" class="form-control"/>
+                    <input  name="width"     value="{{model.widget.width}}" style="display: none"/>
+                    <input  name="userId"    value="{{model.userId}}"   style="display: none"/>
+                    <input  name="websiteId" value="{{model.websiteId}}"   style="display: none"/>
+                    <input  name="pageId"    value="{{model.pageId}}"   style="display: none"/>
+                    <input  name="widgetId"  value="{{model.widget._id}}"   style="display: none"/>
+                    <button type="submit"    class="btn btn-block btn-primary">Upload Image</button>
+                </form>
+
+            </div>
+        </div>
         <div class="ss-space-maker"></div>
         <div class="row">
             <div class="col-sm-12">

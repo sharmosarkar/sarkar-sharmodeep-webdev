@@ -26,5 +26,5 @@ Start-up Instructions
 
 1. npm install
 1. mongod
-1. node server.js
+1. node server.js_BKP
 1. browse to localhost:3000

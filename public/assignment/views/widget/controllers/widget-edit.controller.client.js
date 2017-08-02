@@ -19,7 +19,11 @@
         model.deleteWidget = deleteWidget;
 
         function init() {
-            model.widget = widgetService.findWidgetById(model.wgid);
+            widgetService
+                .findWidgetById(model.wgid)
+                .then(function (response) {
+                    model.widget = response.data;
+                });
         }
         init();
         

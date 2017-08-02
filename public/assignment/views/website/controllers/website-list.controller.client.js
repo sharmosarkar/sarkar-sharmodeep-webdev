@@ -13,8 +13,14 @@
         model.userId = $routeParams.userId;
 
         function init() {
-            model.websites = websiteService.findWebsitesByUser(model.userId);
-            model._id = model.userId;
+            // model.websites = websiteService.findWebsitesByUser(model.userId);
+            // model._id = model.userId;
+            websiteService
+                .findWebsitesByUser(model.userId)
+                .then(function (websites) {
+                    model.websites = websites;
+                    model._id = model.userId;
+                });
         }
         init();
     }

@@ -15,14 +15,6 @@
 
     function userService($http) {
 
-        // data in service
-        var valid_users = [
-            {_id: "123", username: "alice", password: "alice", firstName: "Alice", lastName: "Wonder"},
-            {_id: "234", username: "bob", password: "bob", firstName: "Bob", lastName: "Marley"},
-            {_id: "345", username: "charly", password: "charly", firstName: "Charly", lastName: "Garcia"},
-            {_id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose", lastName: "Annunzi"}
-        ];
-
         var api =  {
 
             'findUserByCredentials' : findUserByCredentials,
@@ -35,70 +27,86 @@
         return api;
 
         function findUserById(userId){
-            for (var u in valid_users) {
-                var _user = valid_users[u];
-                if (_user._id === userId) {
-                    return _user;
-                }
-            }
-            return null;
-            // return $http.get("http://localhost:3000/api/users/"+userId);
+            // for (var u in valid_users) {
+            //     var _user = valid_users[u];
+            //     if (_user._id === userId) {
+            //         return _user;
+            //     }
+            // }
+            // return null;
+            var response = $http.get("/api/users/"+userId);
+            // console.log(response);
+            return response;
         }
 
         function findUserByCredentials(username, password) {
-            for (var u in valid_users) {
-                var _user = valid_users[u];
-                if (_user.username === username && _user.password === password) {
-                    return _user;
-                }
-            }
-            return null;
+            // for (var u in valid_users) {
+            //     var _user = valid_users[u];
+            //     if (_user.username === username && _user.password === password) {
+            //         return _user;
+            //     }
+            // }
+            // return null;
+
+            return $http.get("/api/user?username="+username+"&password="+password);
         }
 
         function updateUser(user_id, user) {
-            for (var u in valid_users) {
-                var _user = valid_users[u];
-                if (_user._id === user_id) {
-                    _user.username = user.username;
-                    _user.firstName = user.firstName;
-                    _user.lastName = user.lastName;
-                   return "Updated";
-                }
-            }
-            return "Couldn't Find User";
+            // for (var u in valid_users) {
+            //     var _user = valid_users[u];
+            //     if (_user._id === user_id) {
+            //         _user.username = user.username;
+            //         _user.firstName = user.firstName;
+            //         _user.lastName = user.lastName;
+            //        return "Updated";
+            //     }
+            // }
+            // return "Couldn't Find User";
+
+            var url = "/api/user/" + user_id;
+            return $http.put(url, user);
+            // return response;
         }
 
         function deleteUser(user_id) {
-            for (var u in valid_users) {
-                var _user = valid_users[u];
-                if (_user._id === user_id) {
-                    valid_users.splice(u, 1);
-                }
-            }
+            // for (var u in valid_users) {
+            //     var _user = valid_users[u];
+            //     if (_user._id === user_id) {
+            //         valid_users.splice(u, 1);
+            //     }
+            // }
+            var url = "/api/user/" + user_id;
+            return $http.delete(url);
         }
 
         function createUser(user){
-            var total_existing_users = valid_users.length;
-            var current_user_id = (total_existing_users+1)+''+(total_existing_users+2)+''+(total_existing_users+3);
-            var user_new = {};
-            user_new._id = current_user_id;
-            user_new.firstName = user.firstName;
-            user_new.lastName = user.lastName;
-            user_new.username = user.username;
-            user_new.password = user.password;
-            valid_users.push(user_new);
-            // console.log(valid_users);
-            return current_user_id;
+            // var total_existing_users = valid_users.length;
+            // var current_user_id = (total_existing_users+1)+''+(total_existing_users+2)+''+(total_existing_users+3);
+            // var user_new = {};
+            // user_new._id = current_user_id;
+            // user_new.firstName = user.firstName;
+            // user_new.lastName = user.lastName;
+            // user_new.username = user.username;
+            // user_new.password = user.password;
+            // // valid_users.push(user_new);
+            // // // console.log(valid_users);
+            // // return current_user_id;
+            //
+            // var url = '/api/user/';
+            // var response = $http.post(url, user_new);
+            // console.log(response.data);
+            // return response.data;
+            var url = "/api/user";
+            var response = $http.post(url, user);
+            return response;
         }
 
-        function findUserByUsername(user){
-            for (var u in valid_users) {
-                var _user = valid_users[u];
-                if (_user.username === user.username) {
-                    return _user;
-                }
-            }
+        function findUserByUsername(username) {
+            var url = "/api/user?username="+username;
+            return $http.get(url);
         }
+
+
     }
 
 })();

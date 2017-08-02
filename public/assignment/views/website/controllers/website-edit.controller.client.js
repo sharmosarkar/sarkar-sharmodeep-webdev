@@ -18,8 +18,18 @@
         model.deleteWebsite = deleteWebsite;
 
         function init() {
-            model.websites = websiteService.findWebsitesByUser(model.userId);
-            model.website = findWebsiteById(model.wid);
+            // model.websites = websiteService.findWebsitesByUser(model.userId);
+            // model.website = findWebsiteById(model.wid);
+            websiteService
+                .findWebsitesByUser(model.userId)
+                .then(function (websites) {
+                    model.websites = websites;
+                });
+            websiteService
+                .findWebsiteById(model.userId, model.wid)
+                .then(function (response) {
+                    model.website = response.data;
+                });
         }
         init();
 
@@ -29,6 +39,7 @@
         }
         
         function updateWebsite(websiteId, website) {
+            // console.log(website);
             websiteService.updateWebsite(websiteId, website);
             $location.url('/user/'+model.userId+'/website');
         }

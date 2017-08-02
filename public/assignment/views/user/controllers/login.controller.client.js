@@ -9,7 +9,7 @@
 
 
 // $scope is the variable that binds the view and the controller
-    function loginController($location, userService) {
+    function loginController($location, userService, $rootScope) {
 
         //
         var model = this;
@@ -29,12 +29,19 @@
                 model.errorMessage = "User not found";
                 return;
             }
-            user = userService.findUserByCredentials(user.username, user.password);
-            if(user === null) {
-                model.errorMessage = "Wrong Username or Password";
-            } else {
-                $location.url("profile/"+user._id);
-            }
+            // user = userService.findUserByCredentials(user.username, user.password);
+            var promise = userService.findUserByCredentials(user.username, user.password);
+            promise
+                .then(function (response) {
+                    user = response.data;
+                    console.log(user);
+                    if(user === '0') {
+                        model.errorMessage = "Wrong Username or Password";
+                    } else {
+                        $rootScope.currentUser = user;
+                        $location.url("profile/"+user._id);
+                    }
+                });
         }
     }
 

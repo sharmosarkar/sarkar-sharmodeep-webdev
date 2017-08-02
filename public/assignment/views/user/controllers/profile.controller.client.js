@@ -17,17 +17,20 @@
         model.unregister = unregister;
 
         function init() {
-            model.user = userService.findUserById(userId);
-            // var promise = userService.findUserById(userId);
-            // promise.then(function (response) {
-            //     model.user = response.data;
-            // });
+            var promise = userService.findUserById(userId);
+            promise.then(function (response) {
+                model.user = response.data;
+            });
         }
         init();
 
         function updateUser(user) {
-            var result = userService.updateUser(userId, user);
-            if (result === "Updated"){
+            var result = userService.updateUser(user._id, user);
+            // console.log(result);
+            // console.log(result.$$state);
+            // console.log(result.$$state.status);
+            var status = result.$$state.status;
+            if (status === 0){
                 model.updateResult = '  Awesome, your Profile data has been updated !!'
             }
             else{
