@@ -23,19 +23,14 @@
 
         function createWidget(widgetType) {
             var widget = {
-                '_id':'',
-                'widgetType': '',
-                'pageId': '',
-                'width': '',
-                'url': '',
-                'size': '',
-                'text': ''
+                'type': ''
             };
-            widget.widgetType = widgetType;
+            widget.type = widgetType;
              widgetService
                  .createWidget(model.pid, widget)
                  .then(function (response) {
                      model.wgid = response.data._id;
+                     model.widget = response.data;
                      $location.url('user/'+model.userId+'/website/'+model.wid+'/page/'+model.pid+'/widget/'+model.wgid);
                  });
             // console.log(model.widget);

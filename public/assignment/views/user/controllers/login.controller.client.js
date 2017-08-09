@@ -35,7 +35,7 @@
                 .then(function (response) {
                     user = response.data;
                     console.log(user);
-                    if(user === '0') {
+                    if(user === null) {
                         model.errorMessage = "Wrong Username or Password";
                     } else {
                         $rootScope.currentUser = user;

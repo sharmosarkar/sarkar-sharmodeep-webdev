@@ -53,7 +53,7 @@
                     var widget_list = [];
                     for (var u in widgets) {
                         var _widget = widgets[u];
-                        if (_widget.widgetType === "YOUTUBE") {
+                        if (_widget.type === "YOUTUBE") {
                             var transformed_url = $filter('youtube_url_to_youtube_embed_url')(_widget.url);
                             _widget.url = transformed_url;
                         }

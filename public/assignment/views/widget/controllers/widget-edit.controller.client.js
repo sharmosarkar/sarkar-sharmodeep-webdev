@@ -19,10 +19,12 @@
         model.deleteWidget = deleteWidget;
 
         function init() {
+            console.log('FROM EDIT WIDGET controller ::: '+model.wgid);
             widgetService
                 .findWidgetById(model.wgid)
                 .then(function (response) {
                     model.widget = response.data;
+                    console.log(model.widget);
                 });
         }
         init();
