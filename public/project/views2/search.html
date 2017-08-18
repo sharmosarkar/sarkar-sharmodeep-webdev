@@ -1,0 +1,106 @@
+<div ng-show="model.user != undefined" class ="alert alert-info">
+    PROFILE OF {{model.user.username}} ; userId = {{model.user._id}}
+</div>
+
+<h1>Music App</h1>
+<h2>Search By Artist Name OR Track Phrase</h2>
+<input placeholder="Please Enter Artist Name"
+       ng-model="entityKeyword"
+       class="form-control"/>
+<button ng-click="model.searchArtist(entityKeyword)" class="btn btn-primary btn-block">
+    Search by artist
+</button>
+<button ng-click="model.searchTrack(entityKeyword)" class="btn btn-primary btn-block">
+    Search by track
+</button>
+
+
+<div ng-switch="model.entityType">
+    <div ng-switch-when="TRACK">
+        <table class="table">
+            <tr ng-repeat="entity in model.entities.results">
+                <td>
+                    <button class="btn btn-success"
+                            data-toggle="modal"
+                            data-target="#myModal"
+                            ng-click="model.trackId = entity.trackId">
+                        Add</button>
+                </td>
+                <td>
+                    {{entity.trackName}}
+                </td>
+                <td>
+                    <a href="#!/details/{{entity.artistId}}">
+                        {{entity.artistName}}
+                    </a>
+                </td>
+                <td>
+                    <!--<img ng-src="{{movie.Poster}}"/>-->
+                    <a href={{entity.artistLinkUrl}}>{{entity.artistName}}'s Home Page</a>
+                </td>
+                <td>
+                    <img ng-src="{{entity.artworkUrl60}}"/>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="{{entity.previewUrl}}" type="audio/mp4">
+                        Your browser does not support the audio element. Sorry !!
+                    </audio>
+                </td>
+                <td>
+                    <a class="btn btn-lg btn-success"
+                       ng-click="model.searchLyrics(entity.trackName, entity.artistName)"
+                       role="button">See Lyrics</a>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+    <div ng-switch-when="ARTIST">
+        <table class="table">
+            <tr ng-repeat="entity in model.entities.results">
+                <td>
+                    <a href="#!/details/{{entity.artistId}}">
+                        {{entity.artistName}}
+                    </a>
+                </td>
+                <td>
+                    <!--<img ng-src="{{movie.Poster}}"/>-->
+                    <a href={{entity.artistLinkUrl}}>{{entity.artistName}}'s Home Page</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create Playlist</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input placeholder="Enter PlayList Name"
+                       ng-model="model.newPlaylist">
+            </div>
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal">
+                    Close
+                </button>
+                <button type="button"
+                        class="btn btn-primary"
+                        data-dismiss="modal"
+                        ng-click="model.addToPlayList(model.newPlaylist, model.trackId)">
+                    Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

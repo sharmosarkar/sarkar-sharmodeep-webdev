@@ -1,0 +1,230 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-10 ss-split-view-right">
+            <div class="row">
+                <div class="col-sm-4 ">
+                    <span class="username">{{model.user.username}}</span><br>
+                    <span class="firstlastname">{{model.user.firstName}} {{model.user.lastName}}</span>
+                </div>
+                <div class="col-sm-4 center-block">
+                    <span class="anthem">My Anthem</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 playlist_padding">
+                    <span class="playlist">PlayList</span>
+                </div>
+            </div>
+
+            <!--begin FOR BIG SCREENS -->
+
+            <div class="row">
+                <div class="col-sm-4 hidden-xs ss-split-view-left" >
+                    <div class="list-group">
+                        <div  ng-repeat="playlist in model.user.playlist"
+                              class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="row text-primary text-bold">
+                                <div class="col-sm-12" >
+                                    <div class="pull-left">
+                                        <strong>
+                                            <a ng-click="model.renderPlaylist(playlist)">
+                                                {{playlist.name}}
+                                            </a>
+                                        </strong>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="">
+                                            <span class="glyphicon glyphicon-cog"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of left panel -->
+                <!-- Beginning of right panel -->
+                <div class="col-sm-8 ss-split-view-right" >
+                    <table class="table">
+                        <tr ng-repeat="entity in model.track_details_list">
+                            <td>
+                                {{entity.trackName}}
+                            </td>
+                            <td>
+                                <a href="#!/details/{{entity.artistId}}">
+                                    {{entity.artistName}}
+                                </a>
+                            </td>
+                            <td>
+                                <!--<img ng-src="{{movie.Poster}}"/>-->
+                                <a href={{entity.artistLinkUrl}}>{{entity.artistName}}'s Home Page</a>
+                            </td>
+                            <td>
+                                <img ng-src="{{entity.artworkUrl60}}"/>
+                            </td>
+                            <td>
+                                <audio controls>
+                                    <source src="{{entity.previewUrl}}" type="audio/mp4">
+                                    Your browser does not support the audio element. Sorry !!
+                                </audio>
+                            </td>
+                            <td>
+                                <a class="btn btn-lg btn-success"
+                                   ng-click="model.searchLyrics(entity.trackName, entity.artistName)"
+                                   role="button">See Lyrics</a>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+        <!-- End of left panel -->
+        <!-- Beginning of right panel -->
+        <div class="col-sm-2 hidden-xs ss-split-view-left">
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="inputWebsiteName">
+                        Website Name
+                    </label>
+                    <input type="text"
+                           id="inputWebsiteName"
+                           class="form-control"
+                           placeholder="Name"
+                           required autofocus
+                           ng-model="model.website.name">
+                </div>
+            </div>
+            <div class="ss-space-maker"></div>
+            <div class="row ss-div-with-margin">
+                <div class="col-sm-12">
+                    <label for="inputWebsiteDescription">
+                        Website Description
+                    </label>
+                    <textarea id="inputWebsiteDescription"
+                              class="form-control"
+                              placeholder="Description"
+                              ng-model="model.website.description"
+                              rows="5">{{model.website.description}}</textarea>
+                </div>
+            </div>
+            <div class="ss-space-maker"></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-lg btn-danger btn-block"
+                       role="button"
+                       ng-click="model.deleteWebsite(model.wid)">
+                        Delete
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="inputWebsiteName">
+                        Website Name
+                    </label>
+                    <input type="text"
+                           id="inputWebsiteName"
+                           class="form-control"
+                           placeholder="Name"
+                           required autofocus
+                           ng-model="model.website.name">
+                </div>
+            </div>
+            <div class="ss-space-maker"></div>
+            <div class="row ss-div-with-margin">
+                <div class="col-sm-12">
+                    <label for="inputWebsiteDescription">
+                        Website Description
+                    </label>
+                    <textarea id="inputWebsiteDescription"
+                              class="form-control"
+                              placeholder="Description"
+                              ng-model="model.website.description"
+                              rows="5">{{model.website.description}}</textarea>
+                </div>
+            </div>
+            <div class="ss-space-maker"></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-lg btn-danger btn-block"
+                       role="button"
+                       ng-click="model.deleteWebsite(model.wid)">
+                        Delete
+                    </a>
+                </div>
+            </div>
+
+            <div class="ss-space-maker"></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-lg btn-danger btn-block"
+                       role="button"
+                       ng-click="model.deleteWebsite(model.wid)">
+                        Delete
+                    </a>
+                </div>
+            </div>
+
+            <div class="ss-space-maker"></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-lg btn-danger btn-block"
+                       role="button"
+                       ng-click="model.deleteWebsite(model.wid)">
+                        Delete
+                    </a>
+                </div>
+            </div>
+
+            <div class="ss-space-maker"></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-lg btn-danger btn-block"
+                       role="button"
+                       ng-click="model.deleteWebsite(model.wid)">
+                        Delete
+                    </a>
+                </div>
+            </div>
+
+            <div class="ss-space-maker"></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-lg btn-danger btn-block"
+                       role="button"
+                       ng-click="model.deleteWebsite(model.wid)">
+                        Delete
+                    </a>
+                </div>
+            </div>
+
+            <div class="ss-space-maker"></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-lg btn-danger btn-block"
+                       role="button"
+                       ng-click="model.deleteWebsite(model.wid)">
+                        Delete
+                    </a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>

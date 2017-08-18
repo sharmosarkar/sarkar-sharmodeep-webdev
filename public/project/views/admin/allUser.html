@@ -1,0 +1,62 @@
+<div class="list-group">
+    <div class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="row  text-bold center-block">
+            <div class="col-sm-2">
+                <strong>Username</strong>
+            </div>
+            <div class="col-sm-2">
+                <strong>First Name</strong>
+            </div>
+            <div class="col-sm-2">
+                <strong>Last Name</strong>
+            </div>
+            <div class="col-sm-3">
+                <strong>Email</strong>
+            </div>
+            <div class="col-sm-2">
+                <strong>Phone</strong>
+            </div>
+            <div class="col-sm-1">
+
+            </div>
+        </div>
+    </div>
+    <div  ng-repeat="user in model.admin.users"
+          class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="row text-primary text-bold center-block">
+            <div class="col-sm-2">
+                <strong ng-show="user.isdeleted != 'True'">{{user.username}}</strong>
+                <span style='color:red;text-decoration:line-through' ng-show="playlist.isdeleted == 'True'">
+                        <strong>{{user.username}}</strong>
+                </span>
+            </div>
+            <div class="col-sm-2">
+                <strong ng-show="user.isdeleted != 'True'">{{user.firstName}}</strong>
+                <span style='color:red;text-decoration:line-through' ng-show="playlist.isdeleted == 'True'">
+                        <strong>{{user.firstName}}</strong>
+                </span>
+            </div>
+            <div class="col-sm-2">
+                <strong ng-show="user.isdeleted != 'True'">{{user.lastName}}</strong>
+                <span style='color:red;text-decoration:line-through' ng-show="playlist.isdeleted == 'True'">
+                        <strong>{{user.lastName}}</strong>
+                </span>
+            </div>
+            <div class="col-sm-3">
+                <strong ng-show="user.isdeleted != 'True'">{{user.email}}</strong>
+                <span style='color:red;text-decoration:line-through' ng-show="playlist.isdeleted == 'True'">
+                        <strong>{{user.email}}</strong>
+                </span>
+            </div>
+            <div class="col-sm-2">
+                <strong ng-show="user.isdeleted != 'True'">{{user.phone}}</strong>
+                <span style='color:red;text-decoration:line-through' ng-show="playlist.isdeleted == 'True'">
+                        <strong>{{user.phone}}</strong>
+                </span>
+            </div>
+            <div class="col-sm-1" ng-click="model.deleteUser(user._id); user.isdeleted == 'True'">
+                    <strong class="glyphicon glyphicon-remove-circle blackcolor"></strong>
+            </div>
+        </div>
+    </div>
+</div>

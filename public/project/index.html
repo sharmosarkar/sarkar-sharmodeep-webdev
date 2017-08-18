@@ -1,29 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="omdbApp">
+<html lang="en" ng-app="musicHub">
 <head>
     <!-- mobile first / no zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Vendor CSS files -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--Own CSS Files-->
+    <link rel="stylesheet" type="text/css" href="css/myStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/sliderStyle.css">
+
+    <link rel="stylesheet" type="text/css" href="css/profileStyle.css">
+
+
+
     <!--Vendor JavaScripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>-->
     <!--Custom JavaScript Files -->
     <script src="app.js"></script>
+    <script src="js/function.js"></script>
     <!--        <<Config Files>>     -->
     <script src="config.js"></script>
-    <script src="controller.js"></script>
-    <script src="service.js"></script>
+    <!--        <<Controller Files>>     -->
+    <script src="controllers/welcomeController.js"></script>
+
+
+    <script src="controllers/user/profileController.js"></script>
+    <script src="controllers/searchController.js"></script>
+    <script src="controllers/user/detailsController.js"></script>
+    <script src="controllers/admin/adminController.js"></script>
+
+    <!--        <<Service Files>>     -->
+    <script src="services/searchService.client.js"></script>
+    <script src="services/userService.client.js"></script>
+    <script src="services/playlistService.client.js"></script>
+    <script src="services/cacheService.client.js"></script>
+    <!--<script src="services/test.js"></script>-->
 
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Music Hub</title>
 </head>
 <body>
 <div ng-view class="container-fluid">
+
 </div>
 </body>
 </html>

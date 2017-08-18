@@ -1,0 +1,181 @@
+<!-- <table class="table">
+    <tr ng-repeat="entity in model.entities.results">
+        <td>
+            {{entity.trackName}}
+        </td>
+        <td>
+            <a href="#!/details/{{entity.artistId}}">
+                {{entity.artistName}}
+            </a>
+        </td>
+        <td>
+            <!--<img ng-src="{{movie.Poster}}"
+            <a href={{entity.artistLinkUrl}}>{{entity.artistName}}'s Home Page</a>
+        </td>
+        <td>
+            <img ng-src="{{entity.artworkUrl60}}"/>
+        </td>
+        <td>
+            <audio controls>
+                <source src="{{entity.previewUrl}}" type="audio/mp4">
+                Your browser does not support the audio element. Sorry !!
+            </audio>
+        </td>
+        <td>
+            <a class="btn btn-lg btn-success"
+               ng-click="model.searchLyrics(entity.trackName)"
+               role="button">See Lyrics</a>
+        </td>
+
+    </tr>
+</table> -->
+
+
+<div ng-repeat="entity in model.entities.results" style="padding-bottom: 20px">
+    <div style="border: 1px solid greenyellow;">
+        <div class="row">
+            <div class="col-sm-1" class="center-block" style="padding-top:20px; padding-left: 50px"
+                 ng-click="" ng-show="model.user != undefined">
+                <h4>
+                    <a role="button" data-target="#ModalPlaylist" data-toggle="modal"
+                       ng-click="model.trackId = entity.trackId; model.getAllPlaylistsForUser(model.user._id)">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                </h4>
+            </div>
+            <div class="col-sm-2" class="pull-left" style="padding-top:20px ">
+                <img ng-src="{{entity.artworkUrl100}}"/>
+            </div>
+            <div class="col-sm-2">
+                <h3>{{entity.trackName}}</h3>
+                <a href="#!/details/{{entity.artistId}}">
+                    <h4 style="font-style: italic; color: lightyellow">{{entity.artistName}}</h4>
+                </a>
+            </div>
+            <div class="col-sm-5 center-block" style="padding-top: 35px">
+                <audio controls>
+                    <source ng-src="{{entity.previewUrl}}" type="audio/mp4">
+                    Your browser does not support the audio element. Sorry !!
+                </audio>
+            </div>
+            <div class="col-sm-1" style="padding-top: 35px">
+                <a class="btn btn-lg btn-success"
+                   data-toggle="modal" data-target="#modalRegister"
+                   ng-click="model.searchLyrics(entity.trackName, entity.artistName)"
+                   role="button" id="lyrics">See Lyrics</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--ng-click="model.searchLyrics(entity.trackName, entity.artistName)"-->
+<div id="modalRegister1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="text-align-last: center">Register</h4>
+            </div>
+            <div class="modal-body">
+                {{model.lyrics}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Lyrics</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{model.lyrics}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--playlist display-->
+
+
+<div class="modal fade" id="ModalPlaylist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header row">
+                <h4 class=" col-sm-11 text-center modal-title blackcolor" id="exampleModalLabel">
+                    Add to Playlist or Create a New Playlist
+                </h4>
+                <button type="button" class="close col-sm-1" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="list-group">
+                            <div ng-repeat="playlist in model.user.playlist"
+                                 class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="row text-primary text-bold">
+                                    <div class="col-sm-12">
+                                        <div class="pull-left">
+                                            <strong>
+                                                <a href="">
+                                                    {{playlist.name}}
+                                                </a>
+                                            </strong>
+                                        </div>
+                                        <div class="pull-right">
+                                            <a ng-click="model.updatePlayList(playlist, model.trackId)"
+                                               data-dismiss="modal">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="col-sm-11">
+                                <input placeholder="Enter New PlayList Name"
+                                       class="form-control"
+                                       ng-model="model.newPlaylist">
+                            </div>
+                            <div class="col-sm-1">
+                                <a ng-click="model.addToPlayList(model.newPlaylist, model.trackId)"
+                                   data-dismiss="modal">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

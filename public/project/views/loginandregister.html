@@ -1,0 +1,184 @@
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close">
+                ×
+            </button>
+            <h4 class="modal-title" id="myLargeModalLabel">
+                Login/Registration
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" id="tabContent">
+                        <li class="active"><a data-target="#HubLogin" data-toggle="tab">Login</a></li>
+                        <li><a data-target="#HubRegistration" data-toggle="tab">Registration</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="HubLogin">
+                            <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="input_Username" class="col-sm-3 control-label">
+                                        UserName</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="input_Username"
+                                               placeholder="UserName"
+                                               ng-model="model.user.username"
+                                               required autofocus/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="input_Password" class="col-sm-3 control-label">
+                                        Password</label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control" id="input_Password"
+                                               placeholder="Password"
+                                               ng-model="model.user.password"
+                                               required/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <button type="button"
+                                                class="btn btn-lg btn-primary btn-block"
+                                                ng-click="model.login(model.user)"
+                                                data-dismiss="modal"
+                                                >
+                                            Login
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="HubRegistration">
+                            <form role="form" class="form-horizontal">
+                                <div ng-show="model.error" class ="alert alert-danger">
+                                    {{model.error}}
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputUsername" class="col-sm-3 control-label">
+                                        User Name</label>
+
+
+
+                                            <div class="col-sm-9">
+                                                <input type="text" id="inputUsername" class="form-control"
+                                                       placeholder="UserName"
+                                                       ng-model="model.user.username" required autofocus/>
+                                            </div>
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputFirstName" class="col-sm-3 control-label">
+                                        First Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="inputFirstName"
+                                               placeholder="First Name" ng-model="model.user.firstName"
+                                               required autofocus/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputLastName" class="col-sm-3 control-label">
+                                        Last Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="inputLastName"
+                                               placeholder="Last Name" ng-model="model.user.lastName"
+                                               required autofocus/>
+                                    </div>
+                                </div>
+                                <div ng-show="model.passwordMismatch" class="alert alert-danger">
+                                    {{model.passwordMismatch}}
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword" class="col-sm-3 control-label">
+                                        Password</label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control" id="inputPassword"
+                                               placeholder="Password" ng-model="model.user.password"
+                                               required/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputVerifyPassword" class="col-sm-3 control-label">
+                                        Verify Password</label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control" id="inputVerifyPassword"
+                                               placeholder="Verify Password" ng-model="model.user.password_2"
+                                               required/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputemail" class="col-sm-3 control-label">
+                                        Email</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" class="form-control" id="inputemail"
+                                               placeholder="Email" ng-model="model.user.email"
+                                               required/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputphone" class="col-sm-3 control-label">
+                                        Phone Number</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="inputphone"
+                                               placeholder="Phone Number" ng-model="model.user.phone"
+                                               required/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <button type="button"
+                                                class="btn btn-lg btn-primary btn-block"
+                                                ng-click="model.signupUser(model.user)"
+                                                data-dismiss="modal"
+                                                id="signupbutton">
+                                            SignUp
+                                        </button>
+
+                                        <!--<button type="button" class="btn btn-default btn-sm">-->
+                                        <!--Cancel-->
+                                        <!--</button>-->
+
+                                        <a class="btn btn-lg btn-danger btn-block"
+                                           role="button"
+                                           href="#!/">
+                                            Cancel
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="OR" class="hidden-xs">
+                        OR
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row text-center sign-with">
+                        <div class="col-md-12">
+                            <h3>
+                                Sign in with</h3>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="btn-group btn-group-justified">
+                                <a href="#" class="btn btn-primary">Facebook</a> <a href="#" class="btn btn-danger">
+                                Google</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

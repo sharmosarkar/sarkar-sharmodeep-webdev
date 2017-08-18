@@ -11,7 +11,7 @@
 
     function profileController($location, $routeParams, userService) {
         var model = this;
-        var userId = $routeParams["userId"];
+        // var userId = $routeParams["userId"];
 
         model.updateUser = updateUser;
         model.unregister = unregister;

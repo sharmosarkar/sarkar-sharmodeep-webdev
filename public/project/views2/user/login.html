@@ -1,0 +1,65 @@
+
+<div class="container">
+    <!--<div ng-controller="loginController">-->
+    <div>
+
+        <div ng-show="model.welcomeUser" class ="alert alert-info">
+            Welcome Back {{model.welcomeUser.username}}
+        </div>
+
+        <div ng-show="model.errorMessage" class ="alert alert-danger">
+            {{model.errorMessage}}
+        </div>
+
+        <!--{{hello}}-->
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Login</h2>
+            <div class="row ss-div-with-margin">
+                <div class="col-sm-12">
+                    <label for="inputUsername" class="sr-only">Username</label>
+                    <input name="inputUsername"
+                           type="text"
+                           id="inputUsername"
+                           class="form-control"
+                           placeholder="Username"
+                           ng-model="model.user.username"
+                           required autofocus>
+                </div>
+            </div>
+            <div class="row ss-div-with-margin">
+                <div class="col-sm-12">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input name="inputPassword"
+                           type="password"
+                           id="inputPassword"
+                           class="form-control"
+                           placeholder="Password"
+                           ng-model="model.user.password"
+                           required>
+                </div>
+            </div>
+            <div class="row ss-div-with-margin">
+                <div class="col-sm-12">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-lg btn-primary btn-block"
+                       role="button"
+                       ng-click="model.login(model.user)">
+                        Login
+                    </a>
+                    <a class="btn btn-lg btn-success btn-block"
+                       role="button"
+                       href="#!/register">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </form>
+        <!--{{username}}-->
+    </div>
+</div> <!-- /container -->

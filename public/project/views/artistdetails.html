@@ -1,0 +1,108 @@
+<nav class="navbar transparent navbar-fixed-top">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="pull-left col-sm-9" style="padding-left: 20px">
+                <h3>
+                    <span id="brandLogo">Music Hub</span>
+
+                </h3>
+            </div>
+            <div class="pull-left col-sm-1" style="padding-top: 30px">
+
+                <a href="#!/musichub/search">
+                    <span class="glyphicon glyphicon-search whitecolor"></span>
+                    <span class="whitecolor">Search</span>
+                </a>
+
+            </div>
+            <div ng-show="model.user != undefined" class="col-sm-2 pull-right" style="padding-top: 23px">
+
+                <div class="dropdown">
+                    <span class="glyphicon glyphicon-user whitecolor" style="font-size: 20px"></span>
+                    <span class="username-font" >{{model.user.username}}</span>
+
+                    <span class="glyphicon glyphicon-menu-down whitecolor"></span>
+
+                    <div class="dropdown-content blackcolor">
+                        <a href="#!/profile/manage/{{model.user._id}}><span class="dropdown-font"> Manage Profile</span> </a><br>
+                        <br>
+                        <a href="#"><span class="dropdown-font">SignOut</span></a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div ng-show="model.user === undefined" class="col-sm-2 pull-right" style="padding-top: 20px">
+                <button class="btn btn-success " data-toggle="modal" data-target="#ModalLogin">
+                    Login
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+</nav>
+<br>
+<br>
+<br>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <img ng-src="{{model.selected_artist.imageUrl}}" height="400" width="300"/>
+
+        </div>
+        <div class="col-sm-6 text-left">
+
+            <h2>{{model.selected_artist.name}}</h2>
+            <div class="row">
+                <div class="col-sm-7">
+                    <h4 class="genre_color">Also Known : &nbsp;&nbsp;<i class="whitecolor">{{model.selected_artist.main_genre}}</i></h4>
+                    <h4 class="genre_color">Genre : &nbsp;&nbsp;<i class="whitecolor">{{model.selected_artist.main_genre}}</i></h4>
+                    <h4 class="genre_color">Country Of Origin: &nbsp;&nbsp;<i class="whitecolor">{{model.selected_artist.country_of_origin}}</i> </h4>
+                    <h4 class="genre_color">Decades Active : &nbsp;&nbsp;<i class="whitecolor">{{model.selected_artist.decade}}</i></h4>
+                </div>
+                <div class="col-sm-5 pull-left">
+                    <img ng-src="./image/spotify.png" width="50" height="50"/>
+                </div>
+            </div>
+            <div class="row">
+                <iframe width="500"
+                        height="315"
+                        src="{{model.selected_artist.youtube_id}}"
+                        allowfullscreen>
+                </iframe >
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<nav class="navbar navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="pull-left">
+                    <h4 style="color: grey">
+                        About: MusicHub.inc
+                    </h4>
+                    <p style="color: grey">
+                        Contact: MusicHub@gmail.com
+                    </p>
+                </div>
+                <div class="pull-right">
+                    <h3 class="text-center">
+
+                        <span class="glyphicon glyphicon-user" style="color: grey;">@2017</span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,275 @@
+
+<nav class="navbar transparent navbar-fixed-top">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="pull-left col-sm-9" style="padding-left: 20px">
+                <h3>
+                    <span id="brandLogo">Music Hub</span>
+
+                </h3>
+            </div>
+            <div class="pull-left col-sm-1" style="padding-top: 30px">
+
+                <a href="#!/search">
+                    <span class="glyphicon glyphicon-search whitecolor"></span>
+                    <span class="whitecolor">Search</span>
+                </a>
+
+            </div>
+            <div ng-show="model.user.loggedStatus === 'true'" class="col-sm-2 pull-right" style="padding-top: 23px">
+
+                <div class="dropdown">
+                    <span class="glyphicon glyphicon-user whitecolor" style="font-size: 20px"></span>
+                    <span class="username-font">{{model.user.username}}</span>
+
+                    <span class="glyphicon glyphicon-menu-down whitecolor"></span>
+
+                    <div class="dropdown-content blackcolor">
+                        <a href="#!/profile"><span class="dropdown-font"> My Profile</span> </a><br>
+                        <br>
+                        <a href="#!/profile/manage"><span class="dropdown-font"> Manage Profile</span> </a><br>
+                        <br>
+                        <a href="#"><span class="dropdown-font">SignOut</span></a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row col-sm-4 ss-split-view-left hidden-xs">
+        <span class="playlist">
+            People You Follow
+        </span>
+        <div class="list-group">
+            <div  ng-repeat="following in model.selected_User.following_details"
+                  class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="row text-primary text-bold text-center blackcolor" ng-click="model.selectedUserDetails(following)">
+                    <!--<div class="col-sm-12" >-->
+                    <!--<div class="pull-left">-->
+                    <div class="col-sm-8">
+                        <h4 class="blackcolor">{{following.username}}</h4>
+                    </div>
+                    <div class="col-sm-2 blackcolor" style="padding-top: 10px" >
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </div>
+                    <!--<strong>-->
+                    <!--<a href="">-->
+                    <!--{{following.username}}-->
+                    <!--</a>-->
+                    <!--</strong>-->
+                    <!--</div>-->
+                    <!--<div class="pull-right">-->
+                    <!--<a href="#!/user/{{model.selected_UserId}}/website/{{website._id}}">-->
+                    <!--<span class="glyphicon glyphicon-cog"></span>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+
+        <span class="playlist">
+            People Following You
+        </span>
+        <div class="list-group">
+            <div  ng-repeat="following in model.selected_User.followers_details"
+                  class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="row text-primary text-bold text-center blackcolor" ng-click="model.selectedUserDetails(following)">
+                    <!--<div class="col-sm-12" >-->
+                    <!--<div class="pull-left">-->
+                    <div class="col-sm-8">
+                        <h4 class="blackcolor">{{following.username}}</h4>
+                    </div>
+                    <div class="col-sm-2 blackcolor" style="padding-top: 10px" >
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </div>
+                    <!--<strong>-->
+                    <!--<a href="">-->
+                    <!--{{following.username}}-->
+                    <!--</a>-->
+                    <!--</strong>-->
+                    <!--</div>-->
+                    <!--<div class="pull-right">-->
+                    <!--<a href="#!/user/{{model.selected_UserId}}/website/{{website._id}}">-->
+                    <!--<span class="glyphicon glyphicon-cog"></span>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="row col-sm-8 ss-split-view-right">
+        <div class="row">
+            <div class="col-sm-6 ">
+                <span class="username">{{model.selected_User.username}}</span><br>
+                <span class="firstlastname">{{model.selected_User.firstName}} {{model.selected_User.lastName}}</span>
+            </div>
+            <div class="col-sm-6 center-block">
+                <span class="anthem">My Anthem</span>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+
+            <div class="col-sm-6">
+                <span class="playlist">
+                    Saved Playlists
+                </span>
+
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card" ng-repeat="playlist in model.selected_User.playlist">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <!--<h5 class="mb-0">-->
+                            <!--<a id='{{playlist.name}}{{playlist.name}}'data-toggle="collapse"-->
+                            <!--data-parent="#accordion" data-target="#{{playlist.name}}"-->
+                            <!--aria-expanded="false" aria-controls="{{playlist.name}}"-->
+                            <!--ng-click="model.renderPlaylist(playlist)">-->
+                            <!--<h4 class="greencolor">{{playlist.name}} &nbsp;<span class="glyphicon glyphicon-triangle-bottom" style="padding-top: 20px"></span></h4>-->
+                            <!--</a>-->
+                            <ul class="list-group">
+                                <li class="list-group-item text-center" style="height: 50px">
+                                    <a id='{{playlist.name}}{{playlist.name}}'data-toggle="collapse"
+                                       data-parent="#accordion" data-target="#{{playlist.name}}"
+                                       aria-expanded="false" aria-controls="{{playlist.name}}"
+                                       ng-click="model.renderPlaylist(playlist)">
+                                        <h4 class="blackcolor">{{playlist.name}} &nbsp;<span class="glyphicon glyphicon-triangle-bottom"></span></h4>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <!--</h5>-->
+
+                        </div>
+
+                        <div id="{{playlist.name}}" class="collapse" role="tabpanel"
+                             aria-labelledby="{{playlist.name}}">
+                            <div class="card-block">
+
+                                <div class="list-group">
+                                    <div ng-repeat="entity in model.track_details_list"
+                                         class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="row text-primary text-bold">
+
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img ng-src="{{entity.artworkUrl60}}"/>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <h5>{{entity.trackName}}</h5>
+                                                    <h6>{{entity.artistName}}</h6>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="row">
+                                                        <!--<div class="col-sm-6">-->
+                                                        <!--<a data-toggle="modal" data-target="#modalRegister"-->
+                                                        <!--ng-click="model.searchLyrics(entity.trackName, entity.artistName)"-->
+                                                        <!--role="button" id="lyrics">Lyrics</a>-->
+                                                        <!--</div>-->
+                                                        <div class="col-sm-12 text-center">
+                                                            <audio id="{{entity.trackName}}"
+                                                                   ng-src="{{entity.previewUrl}}"></audio>
+                                                            <!--<audio controls class="audio_width">-->
+                                                            <!--<source ng-src="{{entity.previewUrl}}" type="audio/mp4">-->
+                                                            <!--Your browser does not support the audio element. Sorry !!-->
+                                                            <!--</audio>-->
+                                                            <a role="button"
+                                                               ng-click="document.getElementById('{{entity.trackName}}').play()">
+                                                                <span class="glyphicon glyphicon-play ashColor"></span>
+                                                            </a>
+                                                            <br>
+                                                            <a role="button"
+                                                               ng-click="document.getElementById('{{entity.trackName}}.play()')">
+                                                                <span class="glyphicon glyphicon-pause ashColor"></span>
+                                                            </a>
+                                                            <br>
+                                                            <a role="button"
+                                                               ng-click="document.getElementById('{{entity.trackName}}.play()')">
+                                                                <span class="glyphicon glyphicon-music ashColor"></span>
+                                                            </a>
+                                                            <!--<button ng-click="document.getElementById('{{entity.trackName}}').play()">Play</button>-->
+                                                            <!--<button ng-click="document.getElementById('{{entity.trackName}}').pause()">Pause</button>-->
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6">
+                <span class="playlist">
+                    Favourite Artists
+                </span>
+                <div class="list-group">
+                    <div  ng-repeat="fav_artist in model.selected_User.fav_artists_details"
+                          class="list-group-item list-group-item-action flex-column align-items-start" style="width: 300px">
+                        <div class="row text-primary text-bold center-block" ng-click="model.selectedArtistDetails(fav_artist)">
+                            <div class="col-sm-4" style="padding-top: 10px">
+                                <img ng-src="{{fav_artist.imageUrl}}" width="40" height="50" />
+                            </div>
+                            <div class="col-sm-6">
+                                <h4 class="ashColor">{{fav_artist.name}}</h4>
+                            </div>
+                            <div class="col-sm-2 blackcolor" style="padding-top: 10px">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+
+
+<nav class="navbar navbar-fixed-bottom navbar-light">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-3">
+                <h4 style="color: grey">
+                    About: MusicHub.inc
+                </h4>
+                <p style="color: grey">
+                    Contact: MusicHub@gmail.com
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <h3 class="text-center">
+
+                    <span class="glyphicon glyphicon-user" style="color: grey;">@2017</span>
+                    </a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</nav>

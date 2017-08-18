@@ -1,0 +1,44 @@
+<div class="list-group">
+    <div class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="row  text-bold center-block">
+            <div class="col-sm-4">
+                <strong>Playlist Name</strong>
+            </div>
+            <div class="col-sm-4">
+                <strong>Playlist Owner</strong>
+            </div>
+            <div class="col-sm-2">
+                <strong>Track Count</strong>
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+    </div>
+    <div  ng-repeat="playlist in model.admin.playlist"
+          class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="row text-primary text-bold text-center">
+            <div class="col-sm-4">
+                <strong ng-show="playlist.isdeleted != 'True'">{{playlist.name}}</strong>
+                <span style='color:red;text-decoration:line-through' ng-show="playlist.isdeleted == 'True'">
+                        <strong>{{playlist.name}}</strong>
+                </span>
+            </div>
+            <div class="col-sm-4">
+                <strong ng-show="playlist.isdeleted != 'True'">{{playlist.username}}</strong>
+                <span style='color:red;text-decoration:line-through' ng-show="playlist.isdeleted == 'True'">
+                        <strong>{{playlist.username}}</strong>
+                </span>
+            </div>
+            <div class="col-sm-2">
+                <strong ng-show="playlist.isdeleted != 'True'">{{playlist.trackCount}}</strong>
+                <span style='color:red;text-decoration:line-through' ng-show="playlist.isdeleted == 'True'">
+                        <strong>{{playlist.trackCount}}</strong>
+                </span>
+            </div>
+            <div class="col-sm-2" ng-click="model.deletePlaylist(playlist._id); playlist.isdeleted = 'True' ">
+                <strong class="glyphicon glyphicon-remove-circle blackcolor"></strong>
+            </div>
+        </div>
+    </div>
+</div>
