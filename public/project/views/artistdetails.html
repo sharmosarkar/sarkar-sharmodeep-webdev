@@ -60,21 +60,26 @@
             <h2>{{model.selected_artist.name}}</h2>
             <div class="row">
                 <div class="col-sm-7">
-                    <h4 class="genre_color">Also Known : &nbsp;&nbsp;<i class="whitecolor">{{model.selected_artist.main_genre}}</i></h4>
+                    <!--<h4 class="genre_color">Also Known : &nbsp;&nbsp;<i class="whitecolor">{{model.selected_artist.main_genre}}</i></h4>-->
                     <h4 class="genre_color">Genre : &nbsp;&nbsp;<i class="whitecolor">{{model.selected_artist.main_genre}}</i></h4>
                     <h4 class="genre_color">Country Of Origin: &nbsp;&nbsp;<i class="whitecolor">{{model.selected_artist.country_of_origin}}</i> </h4>
                     <h4 class="genre_color">Decades Active : &nbsp;&nbsp;<i class="whitecolor">{{model.selected_artist.decade}}</i></h4>
                 </div>
-                <div class="col-sm-5 pull-left">
-                    <img ng-src="./image/spotify.png" width="50" height="50"/>
-                </div>
             </div>
-            <div class="row">
-                <iframe width="500"
-                        height="315"
-                        src="{{model.selected_artist.youtube_id}}"
-                        allowfullscreen>
-                </iframe >
+            <br/><br/>
+            <div class="row text-center">
+                <div class="col-sm-6">
+                    <h4 class = "whitecolor"> Follow on Spotify</h4>
+                    <a href ="https://open.spotify.com/artist/{{model.selected_artist.spotify_id}}" >
+                        <img ng-src="./image/spotify.png" width="100" height="100"/>
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <h4 class = "whitecolor"> Follow on Youtube</h4>
+                    <a href ="https://www.youtube.com/channel/{{model.selected_artist.youtube_id}}" >
+                        <img ng-src="./image/youtube.png" width="100" height="100"/>
+                    </a>
+                </div>
             </div>
 
 
