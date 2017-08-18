@@ -1,4 +1,3 @@
-<!--<nav class="navbar navbar-fixed-top navbar-btn bg- " style="color: black;">-->
 <nav class="navbar transparent navbar-fixed-top">
     <div class="row">
         <div class="col-sm-12">
@@ -10,19 +9,19 @@
             </div>
             <div class="pull-left col-sm-1" style="padding-top: 30px">
 
-                    <a href="#!/search">
-                        <span class="glyphicon glyphicon-search whitecolor"></span>
-                        <span class="whitecolor">Search</span>
-                    </a>
+                <a href="#!/search">
+                    <span class="glyphicon glyphicon-search whitecolor"></span>
+                    <span class="whitecolor">Search</span>
+                </a>
 
             </div>
             <div ng-show="model.user.loggedStatus === 'true'" class="col-sm-2 pull-right" style="padding-top: 23px">
 
-                    <div class="dropdown">
-                        <span class="glyphicon glyphicon-user whitecolor" style="font-size: 20px"></span>
-                            <span class="username-font" >{{model.user.username}}</span>
+                <div class="dropdown">
+                    <span class="glyphicon glyphicon-user whitecolor" style="font-size: 20px"></span>
+                    <span class="username-font">{{model.user.username}}</span>
 
-                            <span class="glyphicon glyphicon-menu-down whitecolor"></span>
+                    <span class="glyphicon glyphicon-menu-down whitecolor"></span>
 
                     <div class="dropdown-content blackcolor">
                         <a href="#!/profile/manage"><span class="dropdown-font"> Manage Profile</span> </a><br>
@@ -30,7 +29,7 @@
                         <a href="#"><span class="dropdown-font">SignOut</span></a>
 
                     </div>
-                    </div>
+                </div>
 
             </div>
             <div ng-show="model.user.loggedStatus != 'true'" class="col-sm-2 pull-right" style="padding-top: 20px">
@@ -57,28 +56,14 @@
         });
 
         $('#myCarousel1').carousel({
-            interval: 4000
+            interval: 3500
         })
 
         $('#myCarousel1').on('slid.bs.carousel', function () {
             //alert("slid");
         });
 
-        $('#myCarousel2').carousel({
-            interval: 3500
-        })
 
-        $('#myCarousel2').on('slid.bs.carousel', function () {
-            //alert("slid");
-        });
-
-        $('#myPlaylist').carousel({
-            interval: 3250
-        })
-
-        $('#myPlaylist').on('slid.bs.carousel', function () {
-            //alert("slid");
-        });
 
     });
 </script>
@@ -92,70 +77,100 @@
             <div id="myCarousel" class="carousel slide">
 
                 <!-- Carousel items -->
-                <div class="carousel-inner">
+                <div class="carousel-inner" style="background-color: white">
                     <div class="item active">
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col-sm-3">
-                                <a href="#x">
-                                    <img src="http://placehold.it/500x500" alt="Image" class="img-responsive">
+                                <a>
+                                    <img src="http://is1.mzstatic.com/image/thumb/Music117/v4/5b/bd/4b/5bbd4b35-f234-6366-3fa1-2f45431f861b/source/100x100bb.jpg"
+                                         alt="Image">
                                 </a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Wild Thoughts</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="http://is5.mzstatic.com/image/thumb/Music122/v4/a3/f0/47/a3f047a3-0632-27b4-a58f-30db9f42eb36/source/100x100bb.jpg"
+                                    alt="Image"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Despacito</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
+                            <div class="col-sm-3"><a href="#x"><img
+                                    src="http://is4.mzstatic.com/image/thumb/Music117/v4/2c/6b/cc/2c6bcc08-8a7a-dd89-d344-4e649f2a1bf8/source/100x100bb.jpg"
+                                    alt="Image"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Believer</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="http://is1.mzstatic.com/image/thumb/Music122/v4/ef/ca/a4/efcaa44a-517a-98e3-2353-5bff15471ed5/source/100x100bb.jpg"
+                                    alt="Image"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Shape of you</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
                         </div>
                         <!--/row-->
                     </div>
                     <!--/item-->
                     <div class="item">
-                        <div class="row">
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
+                        <div class="row text-center">
+                            <div class="col-sm-3"><a><img
+                                    src="http://is1.mzstatic.com/image/thumb/Music122/v4/ef/ca/a4/efcaa44a-517a-98e3-2353-5bff15471ed5/source/100x100bb.jpg"
+                                    alt="Image"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Castle on the Hill</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="http://is4.mzstatic.com/image/thumb/Music71/v4/72/f9/66/72f966be-808b-8bbd-1391-692f168567aa/source/100x100bb.jpg"
+                                    alt="Image"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Versace on the Floor</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="http://is4.mzstatic.com/image/thumb/Music117/v4/06/19/3e/06193ee9-3caa-642c-901c-d0097470c50b/source/100x100bb.jpg"
+                                    alt="Image"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Praying</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="http://is2.mzstatic.com/image/thumb/Music111/v4/02/81/16/02811613-b75f-7223-cd91-63448af2ffde/source/100x100bb.jpg"
+                                    alt="Image"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Paris</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
                         </div>
                         <!--/row-->
                     </div>
                     <!--/item-->
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                        </div>
-                        <!--/row-->
-                    </div>
                     <!--/item-->
                 </div>
                 <!--/carousel-inner-->
@@ -169,162 +184,112 @@
     </div>
 </div>
 
-<!--<div ng-show="model.user != undefined">-->
-    <!--<div class="container">-->
-        <!--<div class="col-md-12">-->
-            <!--<h4>My Playlists</h4>-->
 
-            <!--<div class="well">-->
-                <!--<div id="myPlaylist" class="carousel slide">-->
-
-                    <!--&lt;!&ndash; Carousel items &ndash;&gt;-->
-                    <!--<div class="carousel-inner">-->
-                        <!--<div class="item active">-->
-                            <!--<div class="row">-->
-                                <!--<div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"-->
-                                                                        <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"-->
-                                                                        <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"-->
-                                                                        <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"-->
-                                                                        <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--&lt;!&ndash;/row&ndash;&gt;-->
-                        <!--</div>-->
-                        <!--&lt;!&ndash;/item&ndash;&gt;-->
-                        <!--<div class="item">-->
-                            <!--<div class="row">-->
-                                <!--<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"-->
-                                                                                          <!--alt="Image"-->
-                                                                                          <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"-->
-                                                                                          <!--alt="Image"-->
-                                                                                          <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"-->
-                                                                                          <!--alt="Image"-->
-                                                                                          <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"-->
-                                                                                          <!--alt="Image"-->
-                                                                                          <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--&lt;!&ndash;/row&ndash;&gt;-->
-                        <!--</div>-->
-                        <!--&lt;!&ndash;/item&ndash;&gt;-->
-                        <!--<div class="item">-->
-                            <!--<div class="row">-->
-                                <!--<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"-->
-                                                                                          <!--alt="Image"-->
-                                                                                          <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"-->
-                                                                                          <!--alt="Image"-->
-                                                                                          <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"-->
-                                                                                          <!--alt="Image"-->
-                                                                                          <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"-->
-                                                                                          <!--alt="Image"-->
-                                                                                          <!--class="img-responsive"></a>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--&lt;!&ndash;/row&ndash;&gt;-->
-                        <!--</div>-->
-                        <!--&lt;!&ndash;/item&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash;/carousel-inner&ndash;&gt;-->
-                    <!--<a class="left carousel-control" data-target="#myPlaylist" data-slide="prev">‹</a>-->
-
-                    <!--<a class="right carousel-control" data-target="#myPlaylist" data-slide="next">›</a>-->
-                <!--</div>-->
-                <!--&lt;!&ndash;/myCarousel&ndash;&gt;-->
-            <!--</div>-->
-            <!--&lt;!&ndash;/well&ndash;&gt;-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+<br>
+<br>
+<br>
 
 <div class="container">
     <div class="col-md-12">
-        <h4>Favorite Songs</h4>
+        <h4>Trending Artists</h4>
 
         <div class="well">
             <div id="myCarousel1" class="carousel slide">
-
-                <!-- Carousel items -->
-                <div class="carousel-inner">
+                <div class="carousel-inner" style="background-color: white">
                     <div class="item active">
-                        <div class="row">
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
+                        <div class="row text-center">
+                            <div class="col-sm-3">
+                                <a>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Kendrick_Lamar_Pitchfork_2012.jpg"
+                                         alt="Image" height="200" width="200">
+                                </a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Kendrick Lamar</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Drake_at_Bun-B_Concert_2011.jpg"
+                                    alt="Image" height="200" width="200"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Drake</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
+                            <div class="col-sm-3"><a href="#x"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/a/a7/DJ_Khaled_in_2011.jpg"
+                                    alt="Image" height="200" width="200"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>DJ Khaled</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/1/12/Rihanna_Cologne_2013_03.jpg"
+                                    alt="Image" height="200" width="200"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Rihanna</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
                         </div>
                         <!--/row-->
                     </div>
                     <!--/item-->
                     <div class="item">
-                        <div class="row">
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
+                        <div class="row text-center">
+                            <div class="col-sm-3"><a><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Justin_Timberlake_Cannes_2013.jpg"
+                                    alt="Image" height="200" width="200"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Justin Timberlake</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/2/27/Lady_Gaga_BTW_Ball_Antwerp_02.jpg"
+                                    alt="Image" height="200" width="200"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Lady Gaga</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/3/31/Believe_Tour_7%2C_2012.jpg"
+                                    alt="Image" height="200" width="200"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Justin Bieber</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
                             </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
+                            <div class="col-sm-3"><a><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/1/19/ArianaGrandeDecember2013.jpg"
+                                    alt="Image" height="200" width="200"
+                            ></a>
+                                <div class="col-sm-12 text-center">
+                                    <span class="blackcolor"><i>Ariana Grande</i></span>
+                                    <span class="glyphicon glyphicon-play "></span>
+
+                                </div>
+
                             </div>
                         </div>
                         <!--/row-->
                     </div>
-                    <!--/item-->
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                        </div>
-                        <!--/row-->
-                    </div>
-                    <!--/item-->
+                    <!-- Carousel items -->
                 </div>
                 <!--/carousel-inner-->
                 <a class="left carousel-control" data-target="#myCarousel1" data-slide="prev">‹</a>
@@ -337,89 +302,6 @@
     </div>
 </div>
 
-
-<div class="container">
-    <div class="col-md-12">
-        <h4>Trending Playlists</h4>
-
-        <div class="well">
-            <div id="myCarousel2" class="carousel slide">
-
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <div class="row">
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image"
-                                                                    class="img-responsive"></a>
-                            </div>
-                        </div>
-                        <!--/row-->
-                    </div>
-                    <!--/item-->
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                        </div>
-                        <!--/row-->
-                    </div>
-                    <!--/item-->
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250"
-                                                                                      alt="Image"
-                                                                                      class="img-responsive"></a>
-                            </div>
-                        </div>
-                        <!--/row-->
-                    </div>
-                    <!--/item-->
-                </div>
-                <!--/carousel-inner-->
-                <a class="left carousel-control" data-target="#myCarousel2" data-slide="prev">‹</a>
-
-                <a class="right carousel-control" data-target="#myCarousel2" data-slide="next">›</a>
-            </div>
-            <!--/myCarousel-->
-        </div>
-        <!--/well-->
-    </div>
-</div>
 
 <!-- Large modal -->
 <!--<button class="btn btn-primary" data-toggle="modal" data-target="#ModalLogin">-->
@@ -458,4 +340,3 @@
         </div>
     </div>
 </nav>
-
