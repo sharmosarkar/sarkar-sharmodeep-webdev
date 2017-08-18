@@ -26,7 +26,7 @@
                 controllerAs: "model"
             })
             .when("/profile", {
-                templateUrl: "views/UserProfile.html",
+                templateUrl: "views/userProfile.html",
                 controller: "profileController",
                 controllerAs: "model"
             })
